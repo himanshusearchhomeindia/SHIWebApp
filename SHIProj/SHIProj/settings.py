@@ -14,12 +14,12 @@ import os #we will use this for media and static folder in the app
 from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates') #integrating template folder
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates') #integrating template folder
 
-# STATIC_DIR = os.path.join(BASE_DIR, 'static')#integrating static folder
+STATIC_DIR = os.path.join(BASE_DIR, 'static')#integrating static folder
 
 
 
@@ -33,6 +33,7 @@ SECRET_KEY = '*svhxkru#4ck*jn$1*3rkxlm@f0b3qn!t)+^4epx+$oz#=%pad'
 DEBUG = True
 
 ALLOWED_HOSTS = ['143.110.250.221']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'SHIProj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'], #giving the info of our template folder to the django.
+        'DIRS': [TEMPLATE_DIR], #giving the info of our template folder to the django.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,6 +94,16 @@ DATABASES = {
         'PORT': '', #portname
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'SHIdb',  #database name
+#         'USER': 'postgres',  #username
+#         'PASSWORD': 'postgresql',  #password
+#         'HOST': 'localhost',  #hostname
+#         'PORT': '', #portname
+#     }
+# }
 
 
 
@@ -136,8 +147,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# STATICFILES_DIRS = [STATIC_DIR, ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+STATICFILES_DIRS = [STATIC_DIR, ]
 
 
 # GOOGLE_RECAPTCHA_SECRET_KEY = '6LfuBLIUAAAAACBB_qClgqkR3RVjTmvWusQ8yNpJ'
