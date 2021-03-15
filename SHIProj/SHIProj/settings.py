@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'SHIProj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'SHIdb',  #database name
+        'NAME': 'shidb',  #database name
         'USER': 'shipostgres',  #username
         'PASSWORD': 'search@123',  #password
         'HOST': 'localhost',  #hostname
