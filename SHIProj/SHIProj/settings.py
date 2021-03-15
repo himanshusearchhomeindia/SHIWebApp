@@ -87,12 +87,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'SHIdb',  #database name
-        'USER': 'postgres',  #username
-        'PASSWORD': 'postgresql',  #password
+        'USER': 'shipostgres',  #username
+        'PASSWORD': 'search@123',  #password
         'HOST': 'localhost',  #hostname
-        'PORT': '5432', #portname
+        'PORT': '', #portname
     }
 }
+
+
+
 
 
 # Password validation
