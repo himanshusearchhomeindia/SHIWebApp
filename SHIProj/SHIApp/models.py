@@ -7,7 +7,7 @@ class Amenities(models.Model):
     This model will store the information of the Amenities that are associated with the property.
     """
     Title = models.CharField(max_length=100, default=None)  #This will be the name of the amenities that are present in the particuler property.
-    Icon = models.FileField(upload_to='static/Icon') #This will store the Amenities icon files inside (SHIProj\static\Icon) folder.
+    # Icon = models.FileField(upload_to='static/Icon') #This will store the Amenities icon files inside (SHIProj\static\Icon) folder.
     
     def __str__(self):
         """

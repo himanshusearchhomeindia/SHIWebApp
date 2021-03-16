@@ -149,7 +149,7 @@ SubmitButton2.addEventListener('click', (event) => {
             headers: {
                 //headers will send the info of the content type and csrf token in the backend.
                 'content-Type': "application/json",
-                'X-CSRFToken': csrftoken
+                'X-CSRFToken': csrftoken2
             }
         };
         //making the fetch API request.
