@@ -32,7 +32,8 @@ SECRET_KEY = '*svhxkru#4ck*jn$1*3rkxlm@f0b3qn!t)+^4epx+$oz#=%pad'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['143.110.250.221']
+ALLOWED_HOSTS = ['184.168.127.141'] #url of godaddy
+# ALLOWED_HOSTS = ['143.110.250.221'] #url of digitalocean
 # ALLOWED_HOSTS = []
 
 
@@ -96,6 +97,9 @@ DATABASES = {
         'PORT': '', #portname
     }
 }
+# GRANT ALL PRIVILEGES ON DATABASE shidb TO shipostgres
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
