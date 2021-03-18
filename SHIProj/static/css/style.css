@@ -776,6 +776,20 @@ a.back-to {
     width: 40px;
     z-index: 999;
 }
+a.back-to1 {
+    border-radius: 5px;
+    bottom: 60px;
+    /* color: #fff; */
+    display: none;
+    font-size: 18px;
+    height: 40px;
+    line-height: 45px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    width: 40px;
+    z-index: 999;
+}
 .short-msg a.short-topup {
     border-radius: 5px;
     bottom: 15px;

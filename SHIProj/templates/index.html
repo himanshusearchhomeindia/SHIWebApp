@@ -2,13 +2,15 @@
 {% load static %}
 {%block body_block%}
 
+
+
 <!-- BANNER -->
-<div class="hero_slider padding-bottom-top-120 parallaxie" style="background-image: url(../static/images/homepagebanner.gif);">
+<div class="hero_slider padding-bottom-top-120 parallaxie" style="background-image: url(../static/images/15.gif);">
   <div class="container padding-bottom-top-120">
     <div class="row padding_bottom">
       <div class="col-sm-12 padding_top">
-        <h2 class="text-capitalize text-center top30 color_white" style="color: white;margin-top:135px;"> Discover your
-          Dream Place At <spanclass="color_red" style="color: white;">Search Homes India</span> </h2>
+        <h2 class="text-capitalize text-center top30 color_white"style="margin-top:135px;"> Discover your
+          Dream Place At <spanclass="color_red" style="color: red">Search Homes India</span> </h2>
         <div class="line_1-1"></div>
         <div class="line_2-2"></div>
         <div class="line_3-3"></div>
@@ -71,7 +73,7 @@
                 <div class="single-query">
                   <!-- In this input tag the user will type the query (only property name) -->
                   <input type="text" class="keyword-input" id="query" name="query"
-                    placeholder="Please Enter Name Of  Apartment, Villa, plot, Row-houses"
+                    placeholder="Enter Name Of  Apartment, Villa, plot, Row-houses"
                     onkeypress="return /[a-z A-Z]/i.test(event.key)">
                   <!-- used this code to prevent the number's and symbols to get inputed by the user by using onkeypress and regex expression onkeypress="return /[a-z A-Z]/i.test(event.key)" -->
                 </div>
@@ -118,14 +120,15 @@
               </div>
             </div>
           </form>
+          </form>
           <!-- General Search ends from here -->
         </div>
       </div>
     </div>
 
   </div>
-  <a href="/carriers/">
-    <img src="{% static 'images/weare.png' %}" style="width: 100px;" class="my-floatHiring"
+  <a href="/carriers/" class="back-to1" style="display: inline;">
+    <img src="{% static 'images/weare.png' %}" style="width: 100px;margin-left: -2348px;" class="my-floatHiring"
       data-src="https://mk0homznspaceco9ygoq.kinstacdn.com/wp-content/uploads/2019/06/Were-Hiring-Button-HNS-B.png"
       loading="lazy"></a>
 </div>
@@ -157,19 +160,20 @@
 
           <h4><em>Search Homes India is dedicated to deliver a high level of expertise, customer service, and attention
               to detail to the market of accommodation booking.
-              We built the most featured WordPress theme for property. Test and convince yourself.</em></h4>
-          <p>Search Homes India is dedicated to deliver a high level of expertise, customer service, and attention to
+              We built the most featured WordPress theme for property. Test and convince yourself.</em></h4><br>
+          <!-- <p>Search Homes India is dedicated to deliver a high level of expertise, customer service, and attention to
             detail to the market of accommodation booking.
-            We built the most featured WordPress theme for property. Test and convince yourself.</p><br>
+            We built the most featured WordPress theme for property. Test and convince yourself.</p> -->
           <h5><em>RERA No.: PRM/KA/RERA/1251/446/AG/171007/001088</em></h5>
 
-          <a href="#" class="btn_fill">Read More</a>
+          <a href="/" class="btn_fill">Read More</a>
         </div>
 
         <div class="col-md-6 about-image">
           <div class="row">
             <!-- <div class="col-md-12"> <img src="{% static 'images/c.jpg' %}" alt="" style="margin-left: 205px;"> </div> -->
-            <div class="col-md-6"> <img src="{% static 'video/thumb.jpg' %}" alt="" style="height: 200px;"> </div>
+            <br><div class="col-md-6"> <img src="{% static 'images/11.gif' %}" alt=""> </div>
+           <!-- <br> <div class="col-md-6"> <img src="{% static 'video/thumb.jpg' %}" alt="" style="height:200px;width:274px;"> </div> -->
             <div class="col-md-6"> <img src="{% static 'images/contactpage.jpg' %}" alt=""> </div>
           </div>
           <div class="row">
@@ -194,8 +198,9 @@
 <section id="property" class="index3 bg_light padding">
   <div class="container">
     <div class="row">
+      
       <div class="col-xs-12 bottom40">
-        <h2 class="uppercase"> HOT <span class="color_red" style="color: red;">PROPERTIES</span></h2>
+        <h2 class="uppercase" style="color: red;"> HOT <span class="color_red" style="color:#062d7b">PROPERTIES</span></h2>
         <div class="line_1"></div>
         <div class="line_2"></div>
         <div class="line_3"></div>
@@ -203,188 +208,7 @@
       </div>
     </div>
     <div class="row" id="HotPropertyContainer">
-      <!-- <div class="col-md-4 col-sm-6">
-        <div class="property_item bottom40">
-          <div class="image">
-            <img src="{% static 'images/assert.jpg' %}" alt="listin" class="img-responsive" style="height: 190px;">
-            <div class="property_meta">
-              <span><i class="fa fa-object-group"></i>1366 - 1906 Sq.Ft.</span>
-              <span><i class="fa fa-bed"></i>1,2,3</span>
-              <span><i class="fa fa-bath"></i>1|2 Bathroom</span>
-            </div>
-            <div class="price"><span class="tag">For Sale</span></div>
-            <div class="overlay">
-              <div class="centered"><a class="link_arrow white_border" href="#.">View Detail</a></div>
-            </div>
-          </div>
-          <div class="proerty_content">
-            <div class="proerty_text">
-              <h4><a href="#.">Assetz Marq 2.0</a></h4>
-              <span>WhiteField , Bangalore<span>
-                  <p class="p-font-15">Marq boasts a park so large, we managed to fit in acres of greenery, play areas,
-                    walking tracks, outdoor fitness centers the list goes on.</p>
-            </div>
-            <div class="favroute clearfix">
-              <p class="pull-md-left">Contact for Pricing and Offers</p>
-              <ul class="pull-right">
-                <li><a href="#."><i class="icon-video"></i></a></li>
-                <li><a href="#."><i class="icon-like"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="property_item bottom40">
-          <div class="image">
-            <img src="{% static 'images/Brigade-stone.jpg' %}" alt="listin" class="img-responsive"
-              style="height: 185px;">
-            <div class="property_meta">
-              <span><i class="fa fa-object-group"></i>897 - 962 sq ft </span>
-              <span><i class="fa fa-bed"></i>1,2,3</span>
-              <span><i class="fa fa-bath"></i>1|2 Bathroom</span>
-            </div>
-            <div class="price"><span class="tag">For Sale</span></div>
-            <div class="overlay">
-              <div class="centered"><a class="link_arrow white_border" href="#.">View Detail</a></div>
-            </div>
-          </div>
-          <div class="proerty_content">
-            <div class="proerty_text">
-              <h4><a href="#.">Brigade Corner Stone Utopia</a></h4>
-              <span>WhiteField , Bangalore</span>
-              <p class="p-font-8">Brigade Utopia Tranquil is a new launch Tower comprising of 2,2.5 & 3 Bedroom
-                Apartments located at Whitefield.</p>
-            </div>
-            <div class="favroute clearfix">
-              <p class="pull-md-left">Contact for Pricing and Offers</p>
-              <ul class="pull-right">
-                <li><a href="#."><i class=" icon-video"></i></a></li>
-                <li><a href="#."><i class="icon-like"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="property_item bottom40">
-          <div class="image">
-            <img src="{% static 'images/Prestige-Waterford.jpg' %}" alt="listin" class="img-responsive"
-              style="height: 177px;">
-            <div class="property_meta">
-              <span><i class="fa fa-object-group"></i>630 - 2555 Sq.ft</span>
-              <span><i class="fa fa-bed"></i>1,2,3</span>
-              <span><i class="fa fa-bath"></i>1|2 Bathroom</span>
-            </div>
-            <div class="price"><span class="tag">For Sale</span></div>
-            <div class="overlay">
-              <div class="centered"><a class="link_arrow white_border" href="#.">View Detail</a></div>
-            </div>
-          </div>
-          <div class="proerty_content">
-            <div class="proerty_text">
-              <h3><a href="#.">Prestige Waterford</a></h3>
-              <span>WhiteField , Bangalore</span>
-              <p class="p-font-8">A project by Prestige Group, Prestige Waterford is well-connected to important places
-                of Bangalore like Sarjapur Road.</p>
-            </div>
-            <div class="favroute clearfix">
-              <p class="pull-md-left">Contact for Pricing and Offers</p>
-              <ul class="pull-right">
-                <li><a href="#."><i class="icon-video"></i></a></li>
-                <li><a href="#."><i class="icon-like"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- <div class="col-md-4 col-sm-6">
-          <div class="property_item bottom40">
-            <div class="image">
-              <img src={% static "images/SOBHA-Royal.jpeg" %} alt="listin" class="img-responsive" style="height: 177px;">
-              <div class="property_meta">
-              <span><i class="fa fa-object-group"></i>1632 sq ft </span>
-              <span><i class="fa fa-bed"></i>1,2,3</span>
-              <span><i class="fa fa-bath"></i>1|2 Bathroom</span></div>
-              <div class="price"><span class="tag">For Sale</span></div>
-              <div class="overlay">
-              <div class="centered"><a class="link_arrow white_border" href="#.">View Detail</a></div>
-              </div>
-            </div>
-            <div class="proerty_content">
-              <div class="proerty_text">
-                <h3><a href="#.">Shobha Royal Pavillion</a></h3>
-                <span>Marathalli , Bangalore</span>
-                <p class="p-font-15">Presenting the stunning architecture of Rajasthan with important elements like Chhatri, Jharokha, Jaali, Courtyard & Step well</p>
-              </div>
-              <div class="favroute clearfix">
-                <p class="pull-md-left">Contact for Pricing and Offers</p>
-                <ul class="pull-right">
-                  <li><a href="#."><i class="icon-video"></i></a></li>
-                  <li><a href="#."><i class="icon-like"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      <!-- <div class="col-md-4 col-sm-6">
-          <div class="property_item bottom40">
-            <div class="image">
-              <img src={% static "images/total.jpeg" %} alt="listin" class="img-responsive" style="height: 177px;">
-              <div class="property_meta">
-              <span><i class="fa fa-object-group"></i>2753 - 4100 Sq.ft</span>
-              <span><i class="fa fa-bed"></i>1,2,3</span>
-              <span><i class="fa fa-bath"></i>1|2 Bathroom</span></div>
-              <div class="price"><span class="tag">For Sale</span></div>
-              <div class="overlay">
-              <div class="centered"><a class="link_arrow white_border" href="#.">View Detail</a></div>
-              </div>
-            </div>
-            <div class="proerty_content">
-              <div class="proerty_text">
-                <h3><a href="#.">Total Environment Radical</a></h3>
-                <span>WhiteField , Bangalore</span>
-                <p class="p-font-15">Pursuit of a Radical Rhapsody is located on the edge of a small lake in Whitefield,the IT hub of India’s Silicon Valley.</p>
-              </div>
-              <div class="favroute clearfix">
-                <p class="pull-md-left">Contact for Pricing and Offers</p>
-                <ul class="pull-right">
-                  <li><a href="#."><i class=" icon-video"></i></a></li>
-                  <li><a href="#."><i class="icon-like"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      <!-- <div class="col-md-4 col-sm-6">
-          <div class="property_item bottom40">
-            <div class="image">
-              <img src={% static "images/vaishnavi.jpg" %} alt="listin" class="img-responsive" style="height: 177px;">
-              <div class="property_meta">
-              <span><i class="fa fa-object-group"></i>1815 - 2315 sq ft </span>
-              <span><i class="fa fa-bed"></i>1,2,3</span>
-              <span><i class="fa fa-bath"></i>1|2 Bathroom</span></div>
-              <div class="price"><span class="tag">For Sale</span></div>
-              <div class="overlay">
-              <div class="centered"><a class="link_arrow white_border" href="#.">View Detail</a></div>
-              </div>
-            </div>
-            <div class="proerty_content">
-              <div class="proerty_text">
-                <h3><a href="#.">Vaswani Exquisite</a></h3>
-                <span>WhiteField , Bangalore</span>
-                <p class="p-font-15">Vaswani Group brings you Exquisite, a luxury property offering 3 & 4 BHK spacious lake facing apartments on ITPL Main road.</p>
-              </div>
-              <div class="favroute clearfix">
-                <p class="pull-md-left">Contact for Pricing and Offers</p>
-                <ul class="pull-right">
-                  <li><a href="#."><i class="icon-video"></i></a></li>
-                  <li><a href="#."><i class="icon-like"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> -->
+     
     </div>
 
   </div>
@@ -433,7 +257,7 @@
             <div class="favroute clearfix">
               <p class="pull-md-left" data-target="#SiteVisitModal" role="button" data-toggle="modal">Contact for Pricing and Offers</p>
               <ul class="pull-right">
-                <li><a href="#."><i class="icon-video"></i></a></li>
+                <!-- <li><a href="#."><i class="icon-video"></i></a></li> -->
                 <li><a href="#."><i class="icon-like"></i></a></li>
               </ul>
             </div>
@@ -464,7 +288,7 @@
             <div class="favroute clearfix">
               <p class="pull-md-left" data-target="#SiteVisitModal" role="button" data-toggle="modal">Contact for Pricing and Offers</p>
               <ul class="pull-right">
-                <li><a href="#."><i class=" icon-video"></i></a></li>
+                <!-- <li><a href="#."><i class=" icon-video"></i></a></li> -->
                 <li><a href="#."><i class="icon-like"></i></a></li>
               </ul>
             </div>
@@ -496,7 +320,7 @@
             <div class="favroute clearfix">
               <p class="pull-md-left" data-target="#SiteVisitModal" role="button" data-toggle="modal">Contact For Price and Offers</p>
               <ul class="pull-right">
-                <li><a href="#."><i class="icon-video"></i></a></li>
+                <!-- <li><a href="#."><i class="icon-video"></i></a></li> -->
                 <li><a href="#."><i class="icon-like"></i></a></li>
               </ul>
             </div>
@@ -527,7 +351,7 @@
             <div class="favroute clearfix">
               <p class="pull-md-left" data-target="#SiteVisitModal" role="button" data-toggle="modal">Contact for pricing and offers</p>
               <ul class="pull-right">
-                <li><a href="#."><i class="icon-video"></i></a></li>
+                <!-- <li><a href="#."><i class="icon-video"></i></a></li> -->
                 <li><a href="#."><i class="icon-like"></i></a></li>
               </ul>
             </div>
@@ -558,7 +382,7 @@
             <div class="favroute clearfix">
               <p class="pull-md-left" data-target="#SiteVisitModal" role="button" data-toggle="modal">Contact for Pricing and Offers</p>
               <ul class="pull-right">
-                <li><a href="#."><i class=" icon-video"></i></a></li>
+                <!-- <li><a href="#."><i class=" icon-video"></i></a></li> -->
                 <li><a href="#."><i class="icon-like"></i></a></li>
               </ul>
             </div>
@@ -589,7 +413,7 @@
             <div class="favroute clearfix">
               <p class="pull-md-left" data-target="#SiteVisitModal" role="button" data-toggle="modal">Contact for Pricing and Offers</p>
               <ul class="pull-right">
-                <li><a href="#."><i class="icon-video"></i></a></li>
+                <!-- <li><a href="#."><i class="icon-video"></i></a></li> -->
                 <li><a href="#."><i class="icon-like"></i></a></li>
               </ul>
             </div>
@@ -635,9 +459,10 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="client-loc">
-                    <p><span>Client:</span>Brigade Atmosphere</p>
+                    <p><span>Builder Name:</span>Brigade Group</p>
+                    <p><span>Apartment Name:</span>Brigade Atmosphere</p>
                     <p><span>Location:</span>Devanahalli , Bangalore</p>
-                    <p><span>Value:</span>$ 2.41Cr Onwards*</p>
+                    <p style="color: red;"><span>Value:</span>$ 2.41Cr Onwards*</p>
                   </div>
                   <a class="link_arrow" data-target="#SiteVisitModal" role="button" data-toggle="modal">Contact for more
                     Discount & offers</a>
@@ -664,9 +489,10 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="client-loc">
-                    <p><span>Client:</span>Shobha Arena</p>
+                    <p><span>Builder Name:</span>Sobha Builders</p>
+                    <p><span>Apartment Name:</span>Shobha Arena</p>
                     <p><span>Location:</span>Kanakapura Main Road , Bangalore</p>
-                    <p><span>Value:</span> $ 95Lakh Onwards*</p>
+                    <p style="color: red;"><span>Value:</span> $ 95Lakh Onwards*</p>
                   </div>
                   <a data-target="#SiteVisitModal" role="button" data-toggle="modal" class="link_arrow">Contact for more Discount & offers</a>
                 </div>
@@ -692,9 +518,10 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="client-loc">
-                    <p><span>Client:</span>Prestige Park Square</p>
+                    <p><span>Builder Name:</span>Prestige Group</p>
+                    <p><span>Apartment Name:</span>Prestige Park Square</p>
                     <p><span>Location:</span>Bannerghatta Road , Bangalore</p>
-                    <p><span>Value:</span> $ 80LKH onwards*</p>
+                    <p style="color: red;"><span>Value:</span> $ 80LKH onwards*</p>
                   </div>
                   <a data-target="#SiteVisitModal" role="button" data-toggle="modal" class="link_arrow">Contact for more Discount & offers</a>
                 </div>
@@ -720,9 +547,10 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="client-loc">
-                    <p><span>Client:</span> Assetz Sun and Sanctum</p>
+                    <p><span>Buider Name: </span> Assetz Properties</p>
+                    <p><span>Apartment Name</span> Assetz Sun and Sanctum</p>
                     <p><span>Location:</span> KR Puram , Bangalore</p>
-                    <p><span>Value:</span> $ 86 Lakhs Onwards* </p>
+                    <p style="color: red;"><span>Value:</span> $ 86 Lakhs Onwards* </p>
                   </div>
                   <a data-target="#SiteVisitModal" role="button" data-toggle="modal" class="link_arrow">Contact for more Discount & offers</a>
                 </div>
@@ -922,7 +750,7 @@
         <div class="counters-item">
           <i class="fa fa-th" aria-hidden="true"></i>
 
-          <strong data-to="105620">0</strong>
+          <strong data-to="1056">0</strong>
           <p>Found People there Dream</p>
           <div class="border-inner"></div>
         </div>
@@ -934,7 +762,7 @@
         <div class="counters-item">
           <i class="fa fa-users" aria-hidden="true"></i>
 
-          <strong data-to="1230209">0</strong>
+          <strong data-to="2100">0</strong>
           <p>Our Client</p>
           <div class="border-inner"></div>
         </div>
@@ -946,7 +774,7 @@
         <div class="counters-item">
           <i class="fa fa-th-list" aria-hidden="true"></i>
 
-          <strong data-to="1501239">0</strong>
+          <strong data-to="15010">0</strong>
           <p>Users</p>
           <div class="border-inner"></div>
         </div>
@@ -1050,124 +878,7 @@
     class="feedback"><img src="{% static 'images/wp.png' %}" /></a>
 </div>
 
-<!-- IMAGE WITH CONTENT -->
 
-
-<!-- TEAM -->
-<!-- <section id="our-agent" class="padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center bottom40">
-          <h2 class="text-uppercase bottom10">Hot Investment spots in<span class="color_red"> Bangalore</span></h2>
-          <div class="text-center seprator">
-          <div class="line_4"></div>
-          <div class="line_5"></div>
-          <div class="line_6"></div>
-          </div>
-          <p>We have Properties in these Areas View a list of Featured Properties.</p>
-        </div>
-      </div>
-      <div id="our-agent-slider" class="owl-carousel">
-        <div class="item">
-          <div class="single-effect">
-            <figure class="ageent_overlay">
-              <a href="#."><img src={% static "images/agent-1.jpg" %} alt="img"></a>
-              <figcaption class="view-caption">
-                <a href=".team"><i class="icon-focus"></i></a>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="team_text text-center">
-            <h3>Brian Mady</h3>
-            <span>sales executive</span>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-            <a href="#." class="link_arrow">Read More</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="single-effect">
-            <figure class="ageent_overlay">
-              <a href="#."><img src={% static "images/agent-2.jpg" %} alt="img"></a>
-              <figcaption class="view-caption">
-                <a href=".team"><i class="icon-focus"></i></a>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="team_text text-center">
-            <h3>Micheal brayn</h3>
-            <span>sales executive</span>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-            <a href="#." class="link_arrow">Read More</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="single-effect">
-            <figure class="ageent_overlay">
-              <a href="#."><img src={% static "images/agen-s-3-1.jpg" %} alt="img"></a>
-              <figcaption class="view-caption">
-                <a href=".team"><i class="icon-focus"></i></a>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="team_text text-center">
-            <h3>Sarah de ron</h3>
-            <span>sales executive</span>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-            <a href="#." class="link_arrow">Read More</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="single-effect">
-            <figure class="ageent_overlay">
-              <a href="#."><img src={% static "images/agen-s-3-2.jpg" %} alt="img"></a>
-              <figcaption class="view-caption">
-                <a href=".team"><i class="icon-focus"></i></a>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="team_text text-center">
-            <h3>Norman Rays</h3>
-            <span>sales executive</span>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-            <a href="#." class="link_arrow">Read More</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="single-effect">
-            <figure class="ageent_overlay">
-              <a href="#."><img src={% static "images/agen-s-3-3.jpg" %} alt="img"></a>
-              <figcaption class="view-caption">
-                <a href=".team"><i class="icon-focus"></i></a>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="team_text text-center">
-            <h3>Brian Mady</h3>
-            <span>sales executive</span>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-            <a href="#." class="link_arrow">Read More</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="single-effect">
-            <figure class="ageent_overlay">
-              <a href="#."><img src={% static "images/agen-s-3-4.jpg" %} alt="img"></a>
-              <figcaption class="view-caption">
-                <a href=".team"><i class="icon-focus"></i></a>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="team_text text-center">
-            <h3>Micheal brayn</h3>
-            <span>sales executive</span>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-            <a href="#." class="link_arrow">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-<!--TEAM -->
 
 
 <!-- PARTNER -->

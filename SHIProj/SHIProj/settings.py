@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'SHIApp',   #configuring our app name 
     'rest_framework',  # this is the rest framework we are using for Rest APi Services
+ 
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

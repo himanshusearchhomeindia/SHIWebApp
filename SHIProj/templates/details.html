@@ -7,6 +7,37 @@
 {% if error %}
 <h1> No Details Found </h1>
 {% endif %}
+<style>
+
+        h1 { 
+            font-size: 35px; 
+        } 
+          
+        h1 { 
+            font-size: 21px; 
+            margin-top: 20px; 
+        } 
+          
+        .calculator { 
+            width: 400px; 
+            height: 450px; 
+            background-color: black; 
+            position: absolute; 
+            left: 50%; 
+            top: 50%; 
+            transform: translateX(-50%) translateY(-50%); 
+            padding: 20px 0px 0px 100px; 
+            border-radius: 50px; 
+            color: white; 
+        } 
+          
+        input { 
+            padding: 7px; 
+            width: 70%; 
+            margin-top: 7px; 
+        } 
+</style>
+
 
 
 <!-- PAGE TITLE -->
@@ -185,8 +216,11 @@
         <h2 class="text-uppercase" style="font-family:serif;">{{ Prop_Data.PropertyName }}</h2>
         <!-- <p class="bottom20">{{ Prop_Data.Location }}</p> -->
       </div>
-     <em> <p class="bottom20"><span style="font-size: 17px;  margin-left: 15px;">{{ Prop_Data.PropertyAddress }} ,{{ Prop_Data.Location }} 
-    </span></p></em>
+      <em>
+        <p class="bottom20"><span style="font-size: 17px;  margin-left: 15px;">{{ Prop_Data.PropertyAddress }} ,{{
+            Prop_Data.Location }}
+          </span></p>
+      </em>
       <a data-target="#SiteVisitModal" role="button" data-toggle="modal" class="property-label__status sitevisit_btn"
         pk="{{property.slug}}"> <button class="btn_fill" id="contactsubmit"
           style="margin-left: 15px;font-size: 12px;padding: 10px 12px;border-radius:14px;margin-bottom: 10px;">Fix Site
@@ -333,20 +367,23 @@
                     <div class="col-md-12">
                       <h3 class="text-uppercase bottom20 top10">Our <span style="color: gray;">Plans</span></h3>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
-                      <p class="p-font-15">Master Plan</p>
-                      <div class="image">
-                        {% if Prop_Data.Master_Plan %}
-                        <img src="{{ Prop_Data.Master_Plan.url }}" alt="image">
-                        <div class="overlay border_radius">
-                          <a class="fancybox centered" href="{{ Prop_Data.Master_Plan.url }}"
-                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                          {% else %}
-                          <img src="#" alt="No Master Plan Image Available">
-                          {% endif %}
+                    <div class="row">
+                      <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                        <p class="p-font-15">Master Plan</p>
+                        <div class="image">
+                          {% if Prop_Data.Master_Plan %}
+                          <img src="{{ Prop_Data.Master_Plan.url }}" alt="image">
+                          <div class="overlay border_radius">
+                            <a class="fancybox centered" href="{{ Prop_Data.Master_Plan.url }}"
+                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+                            {% else %}
+                            <img src="#" alt="No Master Plan Image Available">
+                            {% endif %}
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 top10">
                       <p class="p-font-15">Floor Plan 1BHK</p>
                       <div class="image">
@@ -361,6 +398,8 @@
                         {% endif %}
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 top10">
                       <p class="p-font-15">Floor Plan 2BHK</p>
                       <div class="image">
@@ -375,6 +414,8 @@
                         {% endif %}
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 top10">
                       <p class="p-font-15">Floor Plan 3BHK</p>
                       <div class="image">
@@ -389,6 +430,8 @@
                         {% endif %}
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 top10">
                       <p class="p-font-15">Floor Plan 4BHK</p>
                       <div class="image">
@@ -403,6 +446,7 @@
                         {% endif %}
                       </div>
                     </div>
+                  </div>
                   </div>
                 </div>
 
@@ -653,109 +697,35 @@
             </div>
           </div>
         </div>
-        
-        <section id="loan-calculator" style="margin-left: 170px;">
-          <div class="container">
-            <div class="row text-center">
 
-              <!-- <div class="col-md-3 col-sm-2 col-xs-12"></div> -->
 
-              <div class="col-md-6 col-sm-8 col-xs-12" style="width: 70%;">
+        <!-- New loan Calculator -->
 
-                <div class="calc">
-                  <centre>
-                  <div class="row">
-                    <div class="col-md-12 text-center bottom40">
-                      <h2 class="text-uppercase bottom10">Loan <span style="color: gray;">Calculator</span></h2>
-                      <div class="text-center seprator">
-                        <div class="line_4"></div>
-                        <div class="line_5"></div>
-                        <div class="line_6"></div>
-                      </div>
-                      <p>We have Properties in these Areas View a list of Featured Properties.</p>
-                    </div>
-                  </div>
-                </centre>
+        <!-- <div class="calculator" style="margin-top:703px;"> 
+          <h1>Loan Calculator</h1> 
+     -->
+          <!-- Calling Calculate function defined in app.js -->
+          <!-- <p>Amount (₹)     : 
+              <input id="amount" type="number" 
+              onchange="Calculate()"> 
+          </p> 
+    
+          <p>Interest Rate  : 
+              <input id="rate" type="number" 
+              onchange="Calculate()"> 
+          </p> 
+    
+          <p>Months to Pay : 
+              <input id="months" type="number" 
+              onchange="Calculate()"> 
+          </p> 
+    
+          <h2 id="total"></h2> 
+      </div> 
+      <script src={% static "js/app.js" %}></script> -->
 
-                  <div class="row">
-                    <div class="col-md-2 col-sm-2 col-xs-2">
-                      <label for="amount" class="fa fa-usd"></label>
-                    </div>
-                    <div class="col-md-10 col-sm-10 col-xs-10">
-                      <input type="text" id="amount" name="amount" placeholder="Loan Amount">
-                    </div>
-
-                  </div>
-
-                  <div class="row  p-b-30  p-t-30">
-                    <div class="col-md-2 col-sm-2 col-xs-2">
-                      <label for="amount" class="fa fa-calendar"></label>
-                    </div>
-
-                    <div class="col-md-10 col-sm-10 col-xs-10">
-                      <input type="text" id="months" placeholder="Months">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-2 col-sm-2 col-xs-2">
-                      <label for="amount" class="fa fa-calendar"></label>
-                    </div>
-
-                    <div class="col-md-10 col-sm-10 col-xs-10">
-                      <input type="text" id="years" placeholder="Years">
-                    </div>
-                  </div>
-
-                  <div class="row  p-b-30  p-t-30">
-                    <div class="col-md-2 col-sm-2 col-xs-2">
-                      <label for="amount" class="fa interest"></label>
-                    </div>
-
-                    <div class="col-md-10 col-sm-10 col-xs-10">
-                      <input type="text" id="interest" placeholder="Interest Rate">
-                    </div>
-
-                  </div>
-
-                  <!-- <div class="row">
-                     <div class="col-md-2 col-sm-2 col-xs-2">
-                        <label for="amount" class="fa fa-arrow-down"></label>
-                    </div>
-                    
-                    <div class="col-md-10 col-sm-10 col-xs-10">
-                        <input type="text" id="down" placeholder="Down Payment">
-                    </div>
-                    
-                 </div> -->
-
-                  <div class="row  p-b-30  p-t-30">
-                    <div class="col-md-12">
-                      <button class="btn" onclick="myFunction()">Calculate</button>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <p id="output">Monthly Payment</p>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <a href="." class="reset">Reset</a>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <!-- <div class="col-md-3 col-sm-2 col-xs-12"></div> -->
-
-            </div>
-          </div>
-        </section>
+        <!-- End of Loan calculator -->
+       
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12">
         <div class="property-query-area">
@@ -772,7 +742,6 @@
                 <div class="single-query">
                   <select class="selectpicker" id="BuilderQuery" name="BuilderQuery" data-live-search="true">
                     <option class="active">Select Builder</option>
-                    <option>Assertz Property Group</option>
                     <option>Prestige Group</option>
                     <option>Brigade Group</option>
                     <option>Sobha Limited</option>
@@ -951,8 +920,8 @@
                 <div class="property_item heading_space">
                   <div class="image">
                     <center>
-                    <h5 class="text-uppercase">{{ image.PropertyName }}</h5>
-                  </center>
+                      <h5 class="text-uppercase">{{ image.PropertyName }}</h5>
+                    </center>
                     <a href="/{{image.slug}}/{{image.Location}}"><img src="{{ image.Property_Image.url }}" alt="listin"
                         class="img-responsive" style="width:364px; height:254px;"></a>
                     <div class="price clearfix"><span class="tag pull-right"> <small></small></span></div>
@@ -1018,7 +987,8 @@
                 </a>
               </div>
               <div class="proerty_content">
-                <div class="property_meta"> <span><i class="icon-select-an-objecto-tool"></i>{{ image.Project_Area }}</span> <span><i class=" icon-bed"></i>{{ image.BHK }}</span> <span><i
+                <div class="property_meta"> <span><i class="icon-select-an-objecto-tool"></i>{{ image.Project_Area
+                    }}</span> <span><i class=" icon-bed"></i>{{ image.BHK }}</span> <span><i
                       class="icon-safety-shower"></i>1 Bathroom</span> </div>
                 <div class="property_meta padding-b-30"> <span><i class="icon-old-television"></i>TV Lounge</span>
                   <span><i class="icon-garage"></i>1 Garage</span> <span></span>
