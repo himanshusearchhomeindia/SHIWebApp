@@ -156,7 +156,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/var/www/SHIWebApp/SHIProj/staticfiles/')
+STATIC_ROOT = os.path.join(BASE_DIR, '/var/www/SHIWebApp/SHIProj/staticfiles')
 # STATICFILES_DIRS = [STATIC_DIR, ]
 
 
