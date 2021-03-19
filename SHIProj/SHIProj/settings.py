@@ -17,7 +17,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates') #integrating template folder
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates') #integrating template folder
 
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')#integrating static folder
 
@@ -67,7 +67,7 @@ ROOT_URLCONF = 'SHIProj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'], #giving the info of our template folder to the django.
+        'DIRS': [TEMPLATE_DIR], #giving the info of our template folder to the django.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
