@@ -7,8 +7,7 @@ class Amenities(models.Model):
     This model will store the information of the Amenities that are associated with the property.
     """
     Title = models.CharField(max_length=100, default=None)  #This will be the name of the amenities that are present in the particuler property.
-    # Icon = models.FileField(upload_to='static/Icon') #This will store the Amenities icon files inside (SHIProj\static\Icon) folder.
-    
+
     def __str__(self):
         """
         This function will show the amenities name(Title) instead of object in admin panel.
@@ -26,7 +25,7 @@ class Builder(models.Model):
     This model will store the information of the builders that are associated with the property.
     """
     BuilderName = models.CharField(max_length=50, default=None) #This will store the builder's name.
-    Logo = models.FileField(upload_to='static/BuilderLogo') #This will store the logo images related to the builder inside (SHIProj\static\BuilderLogo) folder..
+    Logo = models.FileField(upload_to='media/BuilderLogo') #This will store the logo images related to the builder inside (SHIProj\media\BuilderLogo) folder..
     SolePartner = models.CharField(max_length=100, default=None) #This will store the partners that are associated with a particular builder.
 
     def __str__(self):
@@ -54,30 +53,42 @@ class PropertyList(models.Model):
     #we are using this for improvement of search functionality if the user will write the query in small letter than with the help of this table the filteration will be done.
     SearchName = models.CharField(max_length=100, default="") #This field will help us to make the general search work better !(always store the values in small letters with no space).
 
-    # property images will get uploaded here, inside the (SHIProj\static\Property_images) folder.
-    Property_Image = models.ImageField(upload_to='static/Property_images')
+    # property images will get uploaded here, inside the (SHIProj\media\Property_images) folder.
+    Property_Image = models.ImageField(upload_to='media/Property_images')
 
-    # Master Plan will get uploaded here, inside the (SHIProj\static\Master_Plans) folder.
-    Master_Plan = models.ImageField(upload_to='static/Master_Plans', blank=True, default="")
+    # Master Plan will get uploaded here, inside the (SHIProj\media\Master_Plans) folder.
+    Master_Plan = models.ImageField(upload_to='media/Master_Plans', blank=True, default="")
 
-    # Master Plan will get uploaded here, inside the (SHIProj\static\Floor_Plan_1BHK) folder.
-    Floor_Plan_1BHK = models.ImageField(upload_to='static/Floor_Plan_1BHK', blank=True, default="")
+    # Master Plan will get uploaded here, inside the (SHIProj\media\Floor_Plan_1BHK) folder.
+    Floor_Plan_1BHK = models.ImageField(upload_to='media/Floor_Plan_1BHK', blank=True, default="")
     
-    # Floor_Plan_2BHK will get uploaded here, inside the (SHIProj\static\Floor_Plan_2BHK) folder.
-    Floor_Plan_2BHK = models.ImageField(upload_to='static/Floor_Plan_2BHK', blank=True, default="")
+    # Floor_Plan_2BHK will get uploaded here, inside the (SHIProj\media\Floor_Plan_2BHK) folder.
+    Floor_Plan_2BHK = models.ImageField(upload_to='media/Floor_Plan_2BHK', blank=True, default="")
     
-    # Floor_Plan_3BHK will get uploaded here, inside the (SHIProj\static\Floor_Plan_3BHK) folder.
-    Floor_Plan_3BHK = models.ImageField(upload_to='static/Floor_Plan_3BHK', blank=True, default="")
+    # Floor_Plan_3BHK will get uploaded here, inside the (SHIProj\media\Floor_Plan_3BHK) folder.
+    Floor_Plan_3BHK = models.ImageField(upload_to='media/Floor_Plan_3BHK', blank=True, default="")
     
-    # Floor_Plan_4BHK will get uploaded here, inside the (SHIProj\static\Floor_Plan_4BHK) folder.
-    Floor_Plan_4BHK = models.ImageField(upload_to='static/Floor_Plan_4BHK', blank=True, default="")
+    # Floor_Plan_4BHK will get uploaded here, inside the (SHIProj\media\Floor_Plan_4BHK) folder.
+    Floor_Plan_4BHK = models.ImageField(upload_to='media/Floor_Plan_4BHK', blank=True, default="")
     
-    #video related to a particular property will get stored here inside the (SHIProj\static\Videos) folder.
-    Video = models.FileField(upload_to='static/Videos', blank=True, default="")
+    #video related to a particular property will get stored here inside the (SHIProj\media\Videos) folder.
+    Video = models.FileField(upload_to='media/Videos', blank=True, default="")
 
     # property price will be stored here.
-    Property_Price = models.CharField(max_length=50)
-
+    Property_Price = models.CharField(max_length=50, default="")
+    
+    # BHK1 property price will be stored here.
+    BHK1_Price = models.CharField(max_length=50, default="")
+    
+    # BHK2 property price will be stored here.
+    BHK2_Price = models.CharField(max_length=50, default="")
+    
+    # BHK3 property price will be stored here.
+    BHK3_Price = models.CharField(max_length=50, default="")
+    
+    # BHK4 property price will be stored here.
+    BHK4_Price = models.CharField(max_length=50, default="")
+    
     # property description will be stored here.
     Property_Description = models.TextField(max_length=1000)
 
@@ -154,7 +165,7 @@ class PropertyImages(models.Model):
     This model will store all the images of a particular property with the help of the ForeignKey(PropertyList)
     """
     Image_ID = models.ForeignKey(PropertyList, on_delete=models.CASCADE)  #image id will be based in Foreign key.
-    Images = models.ImageField(upload_to='static/IndividualPropImgs')  #here the multiple images will get stored inside the (SHIProj\static\IndividualPropImgs) (!store one image at a time of a single property).
+    Images = models.ImageField(upload_to='media/IndividualPropImgs')  #here the multiple images will get stored inside the (SHIProj\media\IndividualPropImgs) (!store one image at a time of a single property).
 
     def __str__(self):
         """
@@ -180,30 +191,42 @@ class HotPropertyList(models.Model):
     #we are using this for improvement of search functionality if the user will write the query in small letter than with the help of this table the filteration will be done.
     SearchName = models.CharField(max_length=100, default="") #This field will help us to make the general search work better !(always store the values in small letters with no space).
 
-    # property images will get uploaded here, inside the (SHIProj\static\HotProperty_images) folder.
-    Property_Image = models.ImageField(upload_to='static/HotProperty_images')
+    # property images will get uploaded here, inside the (SHIProj\media\HotProperty_images) folder.
+    Property_Image = models.ImageField(upload_to='media/HotProperty_images')
 
-    # Master Plan will get uploaded here, inside the (SHIProj\static\HotMaster_Plans) folder.
-    Master_Plan = models.ImageField(upload_to='static/HotMaster_Plans', blank=True, default="")
+    # Master Plan will get uploaded here, inside the (SHIProj\media\HotMaster_Plans) folder.
+    Master_Plan = models.ImageField(upload_to='media/HotMaster_Plans', blank=True, default="")
 
-    # Master Plan will get uploaded here, inside the (SHIProj\static\Floor_Plan_1BHK) folder.
-    Floor_Plan_1BHK = models.ImageField(upload_to='static/Hot_Prop_Floor_Plan_1BHK', blank=True, default="")
+    # Master Plan will get uploaded here, inside the (SHIProj\media\Floor_Plan_1BHK) folder.
+    Floor_Plan_1BHK = models.ImageField(upload_to='media/Hot_Prop_Floor_Plan_1BHK', blank=True, default="")
     
-    # Floor_Plan_2BHK will get uploaded here, inside the (SHIProj\static\Floor_Plan_2BHK) folder.
-    Floor_Plan_2BHK = models.ImageField(upload_to='static/Hot_Prop_Floor_Plan_2BHK', blank=True, default="")
+    # Floor_Plan_2BHK will get uploaded here, inside the (SHIProj\media\Floor_Plan_2BHK) folder.
+    Floor_Plan_2BHK = models.ImageField(upload_to='media/Hot_Prop_Floor_Plan_2BHK', blank=True, default="")
     
-    # Floor_Plan_3BHK will get uploaded here, inside the (SHIProj\static\Floor_Plan_3BHK) folder.
-    Floor_Plan_3BHK = models.ImageField(upload_to='static/Hot_Prop_Floor_Plan_3BHK', blank=True, default="")
+    # Floor_Plan_3BHK will get uploaded here, inside the (SHIProj\media\Floor_Plan_3BHK) folder.
+    Floor_Plan_3BHK = models.ImageField(upload_to='media/Hot_Prop_Floor_Plan_3BHK', blank=True, default="")
     
-    # Floor_Plan_4BHK will get uploaded here, inside the (SHIProj\static\Floor_Plan_4BHK) folder.
-    Floor_Plan_4BHK = models.ImageField(upload_to='static/Hot_Prop_Floor_Plan_4BHK', blank=True, default="")
+    # Floor_Plan_4BHK will get uploaded here, inside the (SHIProj\media\Floor_Plan_4BHK) folder.
+    Floor_Plan_4BHK = models.ImageField(upload_to='media/Hot_Prop_Floor_Plan_4BHK', blank=True, default="")
     
-    #video related to a particular property will get stored here inside the (SHIProj\static\HotVideos) folder.
-    Video = models.FileField(upload_to='static/HotPropVideos', blank=True, default="")
+    #video related to a particular property will get stored here inside the (SHIProj\media\HotVideos) folder.
+    Video = models.FileField(upload_to='media/HotPropVideos', blank=True, default="")
 
     # property price will be stored here.
-    Property_Price = models.CharField(max_length=50)
-
+    Property_Price = models.CharField(max_length=50, default="")
+    
+    # BHK1 property price will be stored here.
+    BHK1_Price = models.CharField(max_length=50, default="")
+    
+    # BHK2 property price will be stored here.
+    BHK2_Price = models.CharField(max_length=50, default="")
+    
+    # BHK3 property price will be stored here.
+    BHK3_Price = models.CharField(max_length=50, default="")
+    
+    # BHK4 property price will be stored here.
+    BHK4_Price = models.CharField(max_length=50, default="")
+    
     # property description will be stored here.
     Property_Description = models.TextField(max_length=1000)
 
@@ -280,7 +303,7 @@ class HotPropertyImages(models.Model):
     This model will store all the images of a particular Hotproperty with the help of the ForeignKey(PropertyList)
     """
     Image_ID = models.ForeignKey(HotPropertyList, on_delete=models.CASCADE)  #image id will be based in Foreign key.
-    Images = models.ImageField(upload_to='static/HotIndividualPropImgs')  #here the multiple images will get stored inside the (SHIProj\static\HotIndividualPropImgs) (!store one image at a time of a single property).
+    Images = models.ImageField(upload_to='media/HotIndividualPropImgs')  #here the multiple images will get stored inside the (SHIProj\media\HotIndividualPropImgs) (!store one image at a time of a single property).
 
     def __str__(self):
         """

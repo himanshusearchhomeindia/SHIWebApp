@@ -22,6 +22,7 @@ window.addEventListener('load', (e) => {
         if (Object.keys(data).length != 0) {
   
           data.forEach(element => {
+            console.log(data);
             //This for loop will iterate over all the element present in the data and one by one it will apppend them into the html variable.
             html += `<div class="col-md-4 col-sm-6">
             <div class="property_item bottom40">

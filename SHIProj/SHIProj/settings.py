@@ -34,7 +34,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['.searchhomesindia.com', '184.168.127.141'] #url of godaddy
 ALLOWED_HOSTS = ['.searchhomesindia.com', '143.110.250.221'] #url of digitalocean
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'SHIProj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-#This is the database info where we are using the postgresql database.
+#This is the database info where we are using the postgresql database it is being used in server so don't delete it.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -155,8 +155,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 
+#This is used to access the css,jsvascript and static image files in the project.
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+#This is used to access the image files from the project which has been uploaded by using the django admin panel.
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "/media")
 # STATICFILES_DIRS = [STATIC_DIR, ]
 
 

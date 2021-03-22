@@ -2,6 +2,8 @@ from django.urls import path #we use path to make the urls endpoints.
 from .views import (home, PropertyListing, PropertyView, IndividualProp, advfilt_properties, about,
                       blog, faq, testimonials, terms, loan_calculator, contact_us, carriers, ContactData, CarrierData, PropertyContactData, ExclusiveProperty, SmartSearch, TimeLine, compare_property, compare, HotPropertyView, HotIndividualProp) #these are the view function's that we are using to perform the operations.
 
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', home, name='home'), #this will show the homepage of the website.
@@ -29,4 +31,4 @@ urlpatterns = [
     path('timeline/', TimeLine, name='timeline'), #This url will show the timeline page by using TimeLine function from views.py file.
     path('compare_property/', compare_property , name='compare_property'),  #this will show the compare property page 
     path('compare/', compare , name='compare'),  #this will show the compare page 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #This has been used to show the media files in the server.
