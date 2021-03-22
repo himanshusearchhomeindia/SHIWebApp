@@ -77,17 +77,17 @@ class PropertyList(models.Model):
     # property price will be stored here.
     Property_Price = models.CharField(max_length=50, default="")
     
-    # # BHK1 property price will be stored here.
-    # BHK1Price = models.CharField(max_length=50, default="")
+    # BHK1 property price will be stored here.
+    BHK1Price = models.CharField(max_length=50, default="")
     
-    # # BHK2 property price will be stored here.
-    # BHK2Price = models.CharField(max_length=50, default="")
+    # BHK2 property price will be stored here.
+    BHK2Price = models.CharField(max_length=50, default="")
     
-    # # BHK3 property price will be stored here.
-    # BHK3Price = models.CharField(max_length=50, default="")
-    
-    # # BHK4 property price will be stored here.
-    # BHK4Price = models.CharField(max_length=50, default="")
+    # BHK3 property price will be stored here.
+    BHK3Price = models.CharField(max_length=50, default="")
+
+    # BHK4 property price will be stored here.
+    BHK4Price = models.CharField(max_length=50, default="")
     
     # property description will be stored here.
     Property_Description = models.TextField(max_length=1000)
@@ -215,17 +215,17 @@ class HotPropertyList(models.Model):
     # property price will be stored here.
     Property_Price = models.CharField(max_length=50, default="")
     
-    # # BHK1 property price will be stored here.
-    # BHK1Price = models.CharField(max_length=50, default="")
+    # BHK1 property price will be stored here.
+    BHK1Price = models.CharField(max_length=50, default="")
     
-    # # BHK2 property price will be stored here.
-    # BHK2Price = models.CharField(max_length=50, default="")
+    # BHK2 property price will be stored here.
+    BHK2Price = models.CharField(max_length=50, default="")
     
-    # # BHK3 property price will be stored here.
-    # BHK3Price = models.CharField(max_length=50, default="")
+    # BHK3 property price will be stored here.
+    BHK3Price = models.CharField(max_length=50, default="")
     
-    # # BHK4 property price will be stored here.
-    # BHK4Price = models.CharField(max_length=50, default="")
+    # BHK4 property price will be stored here.
+    BHK4Price = models.CharField(max_length=50, default="")
 
     # property description will be stored here.
     Property_Description = models.TextField(max_length=1000)
