@@ -226,7 +226,7 @@ class HotPropertyList(models.Model):
     
     # BHK4 property price will be stored here.
     BHK4_Price = models.CharField(max_length=50, default="")
-    
+
     # property description will be stored here.
     Property_Description = models.TextField(max_length=1000)
 
