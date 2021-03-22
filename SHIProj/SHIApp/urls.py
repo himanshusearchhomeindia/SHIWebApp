@@ -31,4 +31,4 @@ urlpatterns = [
     path('timeline/', TimeLine, name='timeline'), #This url will show the timeline page by using TimeLine function from views.py file.
     path('compare_property/', compare_property , name='compare_property'),  #this will show the compare property page 
     path('compare/', compare , name='compare'),  #this will show the compare page 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #This has been used to show the media files in the server.
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #This has been used to show the media files in the server.

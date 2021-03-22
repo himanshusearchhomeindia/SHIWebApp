@@ -158,8 +158,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 #This is used to access the image files from the project which has been uploaded by using the django admin panel.
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "/media")
 # STATICFILES_DIRS = [STATIC_DIR, ]
 
 
