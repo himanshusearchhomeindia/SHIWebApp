@@ -87,31 +87,31 @@ WSGI_APPLICATION = 'SHIProj.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 #This is the database info where we are using the postgresql database it is being used in server so don't delete it.
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'shidb',  #database name
-#         'USER': 'shipostgres',  #username
-#         'PASSWORD': 'search@123',  #password
-#         'HOST': 'localhost',  #hostname
-#         'PORT': '', #portname
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'shidb',  #database name
+        'USER': 'shipostgres',  #username
+        'PASSWORD': 'search@123',  #password
+        'HOST': 'localhost',  #hostname
+        'PORT': '', #portname
+    }
+}
 # GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
 
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'SHIdb',  #database name
-        'USER': 'postgres',  #username
-        'PASSWORD': 'postgresql',  #password
-        'HOST': 'localhost',  #hostname
-        'PORT': '', #portname
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'SHIdb',  #database name
+#         'USER': 'postgres',  #username
+#         'PASSWORD': 'postgresql',  #password
+#         'HOST': 'localhost',  #hostname
+#         'PORT': '', #portname
+#     }
+# }
 
 
 
