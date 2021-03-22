@@ -33,9 +33,8 @@ SECRET_KEY = '*svhxkru#4ck*jn$1*3rkxlm@f0b3qn!t)+^4epx+$oz#=%pad'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.searchhomesindia.com', '184.168.127.141'] #url of godaddy
-# ALLOWED_HOSTS = ['.searchhomesindia.com', '143.110.250.221'] #url of digitalocean
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.searchhomesindia.com', '143.110.250.221'] #url of digitalocean
+# ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -87,30 +86,30 @@ WSGI_APPLICATION = 'SHIProj.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 #This is the database info where we are using the postgresql database it is being used in server so don't delete it.
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'shidb',  #database name
-#         'USER': 'shipostgres',  #username
-#         'PASSWORD': 'search@123',  #password
-#         'HOST': 'localhost',  #hostname
-#         'PORT': '', #portname
-#     }
-# }
-
-
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'SHIdb',  #database name
-        'USER': 'postgres',  #username
-        'PASSWORD': 'postgresql',  #password
+        'NAME': 'shidb',  #database name
+        'USER': 'shipostgres',  #username
+        'PASSWORD': 'search@123',  #password
         'HOST': 'localhost',  #hostname
         'PORT': '', #portname
     }
 }
+
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'SHIdb',  #database name
+#         'USER': 'postgres',  #username
+#         'PASSWORD': 'postgresql',  #password
+#         'HOST': 'localhost',  #hostname
+#         'PORT': '', #portname
+#     }
+# }
 
 
 
