@@ -34,7 +34,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['.searchhomesindia.com', '184.168.127.141'] #url of godaddy
 ALLOWED_HOSTS = ['.searchhomesindia.com', '143.110.250.221'] #url of digitalocean
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
