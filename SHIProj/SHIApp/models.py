@@ -217,8 +217,14 @@ class HotPropertyList(models.Model):
     # # BHK3 property price will be stored here.
     ExThreeBHK = models.CharField(max_length=90, blank=True)
     
-    # # BHK3 property price will be stored here.
+    # # BHK4 property price will be stored here.
     ExFourBHK = models.CharField(max_length=80, blank=True)
+    
+    #This column will store the information about the Property Possession Date. 
+    PossessionDate = models.CharField(max_length=80, blank=True)
+
+    #This column will store the information about NoOfUnits present in a particular property.
+    NoOfUnits = models.CharField(max_length=80, blank=True)
     
     #video related to a particular property will get stored here inside the (SHIProj\media\HotVideos) folder.
     Video = models.FileField(upload_to='media/HotPropVideos', blank=True, default="")
