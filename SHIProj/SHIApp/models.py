@@ -77,16 +77,16 @@ class PropertyList(models.Model):
     # property price will be stored here.
     Property_Price = models.CharField(max_length=50, default="")
     
-    ExOneBHK = models.CharField(max_length=100, default=" ")
+    ExOneBHK = models.CharField(max_length=100, blank=True)
     
     # BHK2 property price will be stored here.
-    ExTwoBHK = models.CharField(max_length=99, default=" ")
+    ExTwoBHK = models.CharField(max_length=99, blank=True)
     
     # # BHK3 property price will be stored here.
-    ExThreeBHK = models.CharField(max_length=90, default=" ")
+    ExThreeBHK = models.CharField(max_length=90, blank=True)
     
     # # BHK3 property price will be stored here.
-    ExFourBHK = models.CharField(max_length=80, default=" ")
+    ExFourBHK = models.CharField(max_length=80, blank=True)
     
     
     # property description will be stored here.
@@ -209,16 +209,16 @@ class HotPropertyList(models.Model):
     # Floor_Plan_4BHK will get uploaded here, inside the (SHIProj\media\Floor_Plan_4BHK) folder.
     Floor_Plan_4BHK = models.ImageField(upload_to='media/Hot_Prop_Floor_Plan_4BHK', blank=True, default="")
 
-    ExOneBHK = models.CharField(max_length=100, default=" ")
+    ExOneBHK = models.CharField(max_length=100, blank=True)
     
     # BHK2 property price will be stored here.
-    ExTwoBHK = models.CharField(max_length=99, default=" ")
+    ExTwoBHK = models.CharField(max_length=99, blank=True)
     
     # # BHK3 property price will be stored here.
-    ExThreeBHK = models.CharField(max_length=90, default=" ")
+    ExThreeBHK = models.CharField(max_length=90, blank=True)
     
     # # BHK3 property price will be stored here.
-    ExFourBHK = models.CharField(max_length=80, default=" ")
+    ExFourBHK = models.CharField(max_length=80, blank=True)
     
     #video related to a particular property will get stored here inside the (SHIProj\media\HotVideos) folder.
     Video = models.FileField(upload_to='media/HotPropVideos', blank=True, default="")
