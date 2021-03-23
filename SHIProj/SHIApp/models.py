@@ -88,6 +88,11 @@ class PropertyList(models.Model):
     # # BHK3 property price will be stored here.
     ExFourBHK = models.CharField(max_length=80, blank=True)
     
+    #This column will store the information about the Property Possession Date. 
+    PossessionDate = models.CharField(max_length=80, blank=True)
+
+    #This column will store the information about NoOfUnits present in a particular property.
+    NoOfUnits = models.CharField(max_length=80, blank=True)
     
     # property description will be stored here.
     Property_Description = models.TextField(max_length=1000)
