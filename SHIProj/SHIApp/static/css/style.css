@@ -4791,7 +4791,7 @@ span.input-group-btn button {
 }
 .custom-content {
     margin-top: -200px;
-    background: #222;
+    background:#f6f6f6;
     position: relative;
     z-index: 1;
     padding: 50px;

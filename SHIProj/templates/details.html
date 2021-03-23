@@ -215,22 +215,30 @@
                           </tr> -->
 
                          
+                          {% if Prop_Data.ExOneBHK %}
                           <tr>
                             <td><b>1BHK-Price</b></td>
                             <td class="text-right">{{ Prop_Data.ExOneBHK }}</td>
                           </tr>
+                          {% endif %}
+                          {% if Prop_Data.ExTwoBHK %}
                           <tr>
                             <td><b>2BHK-Price</b></td>
                             <td class="text-right">{{ Prop_Data.ExTwoBHK }}</td>
                           </tr>
+                          {% endif %}
+                          {% if Prop_Data.ExThreeBHK %}
                           <tr>
                             <td><b>3BHK-Price</b></td>
                             <td class="text-right">{{ Prop_Data.ExThreeBHK }}</td>
                           </tr>
+                          {% endif %}
+                          {% if Prop_Data.ExFourBHK %}
                           <tr>
                             <td><b>4BHK-Price</b></td>
                             <td class="text-right">{{ Prop_Data.ExFourBHK }}</td>
                           </tr>
+                          {% endif %}
                           <tr>
                             <td><b>Per sq ft</b></td>
                             <td class="text-right">{{ Prop_Data.PerSqftPrice }}</td>
@@ -275,8 +283,8 @@
                           <div class="overlay border_radius">
                             <a class="fancybox centered" href="{{ Prop_Data.Master_Plan.url }}"
                               data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                            {% else %}
-                            <img src="#" alt="No Master Plan Image Available">
+                            <!-- {% else %}
+                            <img src="{% static 'images/NotAvaliableImage.png' %}"> -->
                             {% endif %}
                           </div>
                         </div>
@@ -292,8 +300,8 @@
                           <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_1BHK.url }}"
                             data-fancybox-group="gallery"><i class="icon-focus"></i></a>
                         </div>
-                        {% else %}
-                        <img src="#" alt="No Master Plan Image Available">
+                        <!-- {% else %}
+                        <img src="{% static 'images/NotAvaliableImage.png' %}"> -->
                         {% endif %}
                       </div>
                     </div>
@@ -308,8 +316,8 @@
                           <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_2BHK.url }}"
                             data-fancybox-group="gallery"><i class="icon-focus"></i></a>
                         </div>
-                        {% else %}
-                        <img src="#" alt="No Master Plan Image Available">
+                        <!-- {% else %}
+                        <img src="{% static 'images/NotAvaliableImage.png' %}"> -->
                         {% endif %}
                       </div>
                     </div>
@@ -324,8 +332,8 @@
                           <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_3BHK.url }}"
                             data-fancybox-group="gallery"><i class="icon-focus"></i></a>
                         </div>
-                        {% else %}
-                        <img src="#" alt="No Master Plan Image Available">
+                        <!-- {% else %}
+                        <img scr="{% static 'images/NotAvaliableImage.png' %}"> -->
                         {% endif %}
                       </div>
                     </div>
@@ -340,8 +348,8 @@
                           <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_4BHK.url }}"
                             data-fancybox-group="gallery"><i class="icon-focus"></i></a>
                         </div>
-                        {% else %}
-                        <img src="#" alt="No Master Plan Image Available">
+                        <!-- {% else %}
+                        <img scr="{% static 'images/NotAvaliableImage.png' %}"> -->
                         {% endif %}
                       </div>
                     </div>
@@ -480,8 +488,8 @@
 
                               <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="form-group">
-                                  <input type="number" id="userphone2" name="Number" class="form-control"
-                                    placeholder="Your Phone Number" maxlength="10" required>
+                                  <input type="tel" id="userphone2" name="Number" class="form-control"
+                                    placeholder="Your Phone Number" maxlength="10" onkeypress="return /[0-9]/i.test(event.key)" required>
                                 </div>
                                 <!-- Contact valid or invalid checker div's -->
                                 <div class="valid-feedback" id="isphonevalid2">
@@ -677,8 +685,8 @@
   
                     <div class="col-md-12 col-sm-4 col-xs-12">
                       <div class="form-group">
-                        <input type="number" id="userphone3" name="Number" class="keyword-input form-control"
-                          placeholder="Your Phone Number" maxlength="10" required>
+                        <input type="tel" id="userphone3" name="Number" class="keyword-input form-control"
+                          placeholder="Your Phone Number" maxlength="10" onkeypress="return /[0-9]/i.test(event.key)" required>
                       </div>
                       <!-- Contact valid or invalid checker div's -->
                       <div class="valid-feedback" id="isphonevalid3">
@@ -1108,8 +1116,8 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="form-group">
-                <input type="number" name="Number" id="userphone4" class="keyword-input form-control"
-                  placeholder="Your Phone Number" maxlength="10" required>
+                <input type="tel" name="Number" id="userphone4" class="keyword-input form-control"
+                  placeholder="Your Phone Number" maxlength="10" onkeypress="return /[0-9]/i.test(event.key)" required>
               </div>
               <!-- Contact valid or invalid checker div's -->
               <div class="valid-feedback" id="isphonevalid4">
@@ -1216,8 +1224,8 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="form-group">
-                <input type="number" id="userphone5" name="Number" class="keyword-input form-control"
-                  placeholder="Your Phone Number" maxlength="10" required>
+                <input type="tel" id="userphone5" name="Number" class="keyword-input form-control"
+                  placeholder="Your Phone Number" maxlength="10" onkeypress="return /[0-9]/i.test(event.key)" required>
               </div>
               <!-- Contact valid or invalid checker div's -->
               <div class="valid-feedback" id="isphonevalid5">

@@ -77,16 +77,16 @@ class PropertyList(models.Model):
     # property price will be stored here.
     Property_Price = models.CharField(max_length=50, default="")
     
-    ExOneBHK = models.CharField(max_length=100, blank=True)
+    ExOneBHK = models.CharField(max_length=100, blank=True, default="")
     
     # BHK2 property price will be stored here.
-    ExTwoBHK = models.CharField(max_length=99, blank=True)
+    ExTwoBHK = models.CharField(max_length=99, blank=True, default="")
     
     # # BHK3 property price will be stored here.
-    ExThreeBHK = models.CharField(max_length=90, blank=True)
+    ExThreeBHK = models.CharField(max_length=90, blank=True, default="")
     
     # # BHK3 property price will be stored here.
-    ExFourBHK = models.CharField(max_length=80, blank=True)
+    ExFourBHK = models.CharField(max_length=80, blank=True, default="")
     
     #This column will store the information about the Property Possession Date. 
     PossessionDate = models.CharField(max_length=80, blank=True)
@@ -106,7 +106,7 @@ class PropertyList(models.Model):
     PropertyStatus = models.CharField(max_length=50, choices=PropertyStat)
 
     PropertyType = [
-        ('Residential', 'Residentail'),
+        ('Residential', 'Residential'),
         ('Commercial', 'Commercial'),
     ]  # choices for propertytype.
     # property type will be stored here.

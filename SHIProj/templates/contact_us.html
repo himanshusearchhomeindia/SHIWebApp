@@ -70,8 +70,8 @@
 
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="form-group single-query">
-                                      <input type="number" id="phone" name="Number" class="keyword-input"
-                                    placeholder="Your Phone Number" maxlength="10" required>
+                                      <input type="tel" id="phone" name="Number" class="keyword-input"
+                                    placeholder="Your Phone Number" maxlength="10" onkeypress="return /[0-9]/i.test(event.key)" required>
                                 </div>
                                 <!-- Contact valid or invalid checker div's -->
                                 <div class="valid-feedback" id="phonevalid">

@@ -592,8 +592,9 @@ jQuery(function($) {
     /* Typewriter
     ============================================== */
     $('#typewriter').typewriter({
-        prefix: "Idea homes provides ",
-        text: ["best clients", "best stellar service", "simple question", "home valutation"],
+        
+        prefix: "Discover your Dream Place At  ",
+        text: ["Search Homes India"],
         typeDelay: 90,
         waitingTime: 1500,
         blinkSpeed: 200
