@@ -552,34 +552,109 @@
               </div>
             </div>
           </div>
-
-
-          <!-- New loan Calculator -->
-
-          <!-- <div class="calculator" style="margin-top:703px;"> 
-          <h1>Loan Calculator</h1> 
-     -->
-          <!-- Calling Calculate function defined in app.js -->
-          <!-- <p>Amount (₹)     : 
-              <input id="amount" type="number" 
-              onchange="Calculate()"> 
-          </p> 
-    
-          <p>Interest Rate  : 
-              <input id="rate" type="number" 
-              onchange="Calculate()"> 
-          </p> 
-    
-          <p>Months to Pay : 
-              <input id="months" type="number" 
-              onchange="Calculate()"> 
-          </p> 
-    
-          <h2 id="total"></h2> 
-      </div> 
-      <script src={% static "js/app.js" %}></script> -->
-
-          <!-- End of Loan calculator -->
+          
+          <!--===== Loan Calculator =====-->
+  <section id="loan-calculator" style="padding: 10px 0px;margin-left: -264px;">
+    <div class="container">
+      <div class="row text-center">
+      
+        <div class="col-md-3 col-sm-2 col-xs-12"></div>
+          
+        <div class="col-md-6 col-sm-8 col-xs-12">
+  
+          <div class="calc">
+          
+          <div class="row">
+            <div class="col-md-12 text-center bottom40">
+              <h2 class="text-uppercase bottom10">Loan <span class="color_red" style="color: gray;">Calculator</span></h2>
+              <div class="text-center seprator">
+              <div class="line_4"></div>
+              <div class="line_5"></div>
+              <div class="line_6"></div>
+              </div>
+              <p>We have Properties in these Areas View a list of Featured Properties.</p>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="col-md-2 col-sm-2 col-xs-2">
+                <label for="amount" class="fa fa-usd"></label>
+            </div>
+            <div class="col-md-10 col-sm-10 col-xs-10">
+              <input type="text" id="amount" name="amount" placeholder="Loan Amount">
+            </div>
+           
+           </div>
+          
+          <div class="row  p-b-30  p-t-30">  
+            <div class="col-md-2 col-sm-2 col-xs-2">
+              <label for="amount" class="fa fa-calendar"></label>
+            </div>
+            
+            <div class="col-md-10 col-sm-10 col-xs-10">
+              <input type="text" id="months" placeholder="Months">
+            </div>
+          </div>
+          
+          <div class="row">  
+            <div class="col-md-2 col-sm-2 col-xs-2">
+              <label for="amount" class="fa fa-calendar"></label>
+            </div>
+              
+            <div class="col-md-10 col-sm-10 col-xs-10">
+                <input type="text" id="years" placeholder="Years">
+            </div>
+          </div>
+          
+          <div class="row  p-b-30  p-t-30">
+            <div class="col-md-2 col-sm-2 col-xs-2">
+              <label for="amount" class="fa interest"></label>
+            </div>
+            
+            <div class="col-md-10 col-sm-10 col-xs-10">
+              <input type="text" id="interest" placeholder="Interest Rate">
+            </div>
+            
+            </div>
+            
+           <!-- <div class="row">
+               <div class="col-md-2 col-sm-2 col-xs-2">
+                  <label for="amount" class="fa fa-arrow-down"></label>
+              </div>
+              
+              <div class="col-md-10 col-sm-10 col-xs-10">
+                  <input type="text" id="down" placeholder="Down Payment">
+              </div>
+              
+           </div> -->
+           
+           <div class="row  p-b-30  p-t-30">
+            <div class="col-md-12">
+              <button class="btn" onclick="myFunction()">Calculate</button>
+            </div>
+           </div>
+           
+           <div class="row">
+            <div class="col-md-12">
+              <p id="output">Monthly Payment</p>
+            </div>
+           </div>
+           
+           <div class="row">
+            <div class="col-md-12">
+              <a href="." class="reset">Reset</a>
+            </div>
+           </div>
+           
+          </div>
+        </div>
+        
+        <div class="col-md-3 col-sm-2 col-xs-12"></div>
+        
+      </div>
+    </div>
+  </section>
+  <!--===== #/Loan Calculator =====--> 
 
         </div>
         <!-- Enquiry now for -->
@@ -594,7 +669,7 @@
           </div>
           <div class="slider-form col-md-4  col-sm-4 wow fadeIn text-center animated" data-wow-delay="0.5s"
             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-            <div class="form-wrap" style="width: 358px;margin-left: -117px;margin-top: 81px;">
+            <div class="form-wrap" style="width: 358px;margin-left: -93px;margin-top: 81px;background-color: #eff8ff;">
               <div class="form-appointment">
                 <form class="contact-form" id="PropContactform3">
                   {% csrf_token %}
