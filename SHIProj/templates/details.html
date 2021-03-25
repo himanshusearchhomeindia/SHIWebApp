@@ -99,7 +99,7 @@
       </div>
       <em>
         <p class="bottom20"><span style="font-size: 17px;  margin-left: 15px;">{{ Prop_Data.PropertyAddress }} ,
-          {{ Prop_Data.Location }}
+            {{ Prop_Data.Location }}
           </span></p>
       </em>
       <a data-target="#SiteVisitModal" role="button" data-toggle="modal" class="property-label__status sitevisit_btn"
@@ -274,400 +274,414 @@
                     <div class="col-md-12">
                       <h3 class="text-uppercase bottom20 top10">Our <span style="color: gray;">Plans</span></h3>
                     </div>
+                    {% if Prop_Data.Master_Plan %}
                     <div class="col-md-4 col-sm-4 col-xs-12 top10">
-                        {% if Prop_Data.Master_Plan %}
-                        <p class="p-font-15">Master Plan</p>
-                        <div class="image">
-                          <img src="{{ Prop_Data.Master_Plan.url }}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{{ Prop_Data.Master_Plan.url }}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                              
-                          </div>
+                      <p class="p-font-15">Master Plan</p>
+                      <div class="image">
+                        <img src="{{ Prop_Data.Master_Plan.url }}" alt="image" style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{{ Prop_Data.Master_Plan.url }}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+
                         </div>
-                        {% else %}
-                        <p class="p-font-15">Master Plan</p>
-                        <div class="image">
-                          <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                              
-                          </div>
-                        </div>
-                        {% endif %}
-                      </div>
-                    
-                    
-                      <div class="col-md-4 col-sm-4 col-xs-12 top10">
-                        {% if Prop_Data.Floor_Plan_1BHK %}
-                        <p class="p-font-15">Floor Plan 1BHK</p>
-                        <div class="image">
-                          <img src="{{ Prop_Data.Floor_Plan_1BHK.url }}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_1BHK.url }}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                          </div>
-                          
-                        </div>
-                        {% else %}
-                        <p class="p-font-15">Floor Plan 1BHK</p>
-                        <div class="image">
-                          <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                              
-                          </div>
-                        </div>
-                        {% endif %}
-                      </div>
-                   
-                    
-                      <div class="col-md-4 col-sm-4 col-xs-12 top10">
-                        {% if Prop_Data.Floor_Plan_2BHK %}
-                        <p class="p-font-15">Floor Plan 2BHK</p>
-                        <div class="image">
-                          <img src="{{ Prop_Data.Floor_Plan_2BHK.url }}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_2BHK.url }}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                          </div>
-                         
-                        </div>
-                        {% else %}
-                        <p class="p-font-15">Floor Plan 2BHK</p>
-                        <div class="image">
-                          <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                              
-                          </div>
-                        </div>
-                        {% endif %}
-                      </div>
-                   
-                    
-                      <div class="col-md-4 col-sm-4 col-xs-12 top10">
-                        {% if Prop_Data.Floor_Plan_3BHK %}
-                        <p class="p-font-15">Floor Plan 3BHK</p>
-                        <div class="image">
-                          <img src="{{ Prop_Data.Floor_Plan_3BHK.url }}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_3BHK.url }}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                          </div>
-                          
-                        </div>
-                        {% else %}
-                        <p class="p-font-15">Floor Plan 3BHK</p>
-                        <div class="image">
-                          <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                              
-                          </div>
-                        </div>
-                        {% endif %}
-                      </div>
-                    
-                      <div class="col-md-4 col-sm-4 col-xs-12 top10">
-                        {% if Prop_Data.Floor_Plan_4BHK %}
-                        <p class="p-font-15">Floor Plan 4BHK</p>
-                        <div class="image">
-                          <img src="{{ Prop_Data.Floor_Plan_4BHK.url }}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_4BHK.url }}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                          </div>
-                          
-                        </div>
-                        {% else %}
-                        <p class="p-font-15">Floor Plan 4BHK</p>
-                        <div class="image">
-                          <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image" style="height: 186px;width: 238px;">
-                          <div class="overlay border_radius">
-                            <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
-                              data-fancybox-group="gallery"><i class="icon-focus"></i></a>
-                              
-                          </div>
-                        </div>
-                        {% endif %}
                       </div>
                     </div>
-                </div>
+                    {% else %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Master Plan</p>
+                      <div class="image">
+                        <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image"
+                          style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if Prop_Data.Floor_Plan_1BHK %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 1BHK</p>
+                      <div class="image">
+                        <img src="{{ Prop_Data.Floor_Plan_1BHK.url }}" alt="image" style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_1BHK.url }}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+                        </div>
+
+                      </div>
+                    </div>
+                    {% else %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 1BHK</p>
+                      <div class="image">
+                        <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image"
+                          style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if Prop_Data.Floor_Plan_2BHK %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 2BHK</p>
+                      <div class="image">
+                        <img src="{{ Prop_Data.Floor_Plan_2BHK.url }}" alt="image" style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_2BHK.url }}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+                        </div>
+
+                      </div>
+                    </div>
+                    {% else %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 2BHK</p>
+                      <div class="image">
+                        <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image"
+                          style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if Prop_Data.Floor_Plan_3BHK %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 3BHK</p>
+                      <div class="image">
+                        <img src="{{ Prop_Data.Floor_Plan_3BHK.url }}" alt="image" style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_3BHK.url }}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+                        </div>
+
+                      </div>
+                    </div>
+                    {% else %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 3BHK</p>
+                      <div class="image">
+                        <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image"
+                          style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                    {% if Prop_Data.Floor_Plan_4BHK %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 4BHK</p>
+                      <div class="image">
+                        <img src="{{ Prop_Data.Floor_Plan_4BHK.url }}" alt="image" style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{{ Prop_Data.Floor_Plan_4BHK.url }}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+                        </div>
+
+                      </div>
+                    </div>
+                    {% else %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 top10">
+                      <p class="p-font-15">Floor Plan 4BHK</p>
+                      <div class="image">
+                        <img src="{% static 'images/NotAvaliableImage.png' %}" alt="image"
+                          style="height: 186px;width: 238px;">
+                        <div class="overlay border_radius">
+                          <a class="fancybox centered" href="{% static 'images/NotAvaliableImage.png' %}"
+                            data-fancybox-group="gallery"><i class="icon-focus"></i></a>
+
+                        </div>
+                      </div>
+                    </div>
+                    {% endif %}
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="tab_contact">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h3 class="text-uppercase  bottom30 top10">Contact <span style="color: gray;">Agent</span></h3>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="agent-p-img"> <img src={% static "images/1.png" %} class="img-responsive"
-                            alt="image" />
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="agent-p-contact">
-                          <div class="our-agent-box">
-                            <h3>{{ prop.name }}</h3>
-                            <!-- <p class="p-font-15">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer adipiscing eleifend option congue nihil imperdiet doming…</p> -->
-                          </div>
-                          <br />
-                          <div class="agetn-contact">
-                            <!-- <h6>Phone:</h6> -->
-                            <h6>Mobile:</h6>
-                            <h6>Email Adress:</h6>
-                            <h6>Website:</h6>
-                          </div>
-                          <div class="agetn-contact-2">
-                            <!-- <p>(+01) 34 56 7890</p> -->
-                            <p>+91 - 90197 79977</p>
-                            <p>info@searchhomesindia</p>
-                            <p>www.searchhomesindia.com</p>
-                          </div>
-                        </div>
-                        <ul class="socials">
-                          <li><a href="https://www.facebook.com/searchhomesindia" target="_blank"><i
-                                class="fa fa-facebook"></i></a></li>
-                          <li><a href="https://twitter.com/SearchhomesIndi" target="_blank"><i
-                                class="fa fa-twitter"></i></a></li>
-                          <li><a href="https://www.youtube.com/channel/UCL-jPeknKXvpJG10vDw6cCg" target="_blank"><i
-                                class="fa fa-youtube"></i></a></li>
-                          <li><a href="https://www.instagram.com/searchhomesindia_/?igshid=7ipgwp7nfpjf"
-                              target="_blank"><i class="fa fa-instagram"></i></a></li>
-                          <li><a href="https://in.linkedin.com/company/search-homes-india" target="_blank"><i
-                                class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                      </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab_contact">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="text-uppercase  bottom30 top10">Contact <span style="color: gray;">Agent</span></h3>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="agent-p-img"> <img src={% static "images/1.png" %} class="img-responsive" alt="image" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="agent-p-contact">
+                    <div class="our-agent-box">
+                      <h3>{{ prop.name }}</h3>
+                      <!-- <p class="p-font-15">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer adipiscing eleifend option congue nihil imperdiet doming…</p> -->
                     </div>
-                    <div class="row top20">
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="agent-p-form">
-                          <div class="row" style="width: 740px;">
-                            <form class="contact-form" id="PropContactform2">
-                              {% csrf_token %}
-                              <div class="row" style="margin-right: 0;
+                    <br />
+                    <div class="agetn-contact">
+                      <!-- <h6>Phone:</h6> -->
+                      <h6>Mobile:</h6>
+                      <h6>Email Adress:</h6>
+                      <h6>Website:</h6>
+                    </div>
+                    <div class="agetn-contact-2">
+                      <!-- <p>(+01) 34 56 7890</p> -->
+                      <p>+91 - 90197 79977</p>
+                      <p>info@searchhomesindia</p>
+                      <p>www.searchhomesindia.com</p>
+                    </div>
+                  </div>
+                  <ul class="socials">
+                    <li><a href="https://www.facebook.com/searchhomesindia" target="_blank"><i
+                          class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/SearchhomesIndi" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/channel/UCL-jPeknKXvpJG10vDw6cCg" target="_blank"><i
+                          class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/searchhomesindia_/?igshid=7ipgwp7nfpjf" target="_blank"><i
+                          class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://in.linkedin.com/company/search-homes-india" target="_blank"><i
+                          class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row top20">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="agent-p-form">
+                    <div class="row" style="width: 740px;">
+                      <form class="contact-form" id="PropContactform2">
+                        {% csrf_token %}
+                        <div class="row" style="margin-right: 0;
                               margin-left: 0;padding-top: 10px;">
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                  <input type="hidden" name="Propdetail" id="Propdetail2"
-                                    value="{{ Prop_Data.PropertyName }}">
-                                  <div class="form-group">
-                                    <input type="text" id="username2" name="name" class="form-control"
-                                      placeholder="Your Name" required>
-                                  </div>
+                          <div class="col-md-4 col-sm-4 col-xs-12">
+                            <input type="hidden" name="Propdetail" id="Propdetail2"
+                              value="{{ Prop_Data.PropertyName }}">
+                            <div class="form-group">
+                              <input type="text" id="username2" name="name" class="form-control" placeholder="Your Name"
+                                required>
+                            </div>
 
-                                  <!-- Name valid or invalid checker div's -->
-                                  <div class="valid-feedback" id="isnamevalid2">
-                                    Looks good!
-                                  </div>
-                                  <div class="invalid-feedback" id="isnameinvalid2">
-                                    Please Enter a valid Name.
-                                  </div>
-                                </div>
+                            <!-- Name valid or invalid checker div's -->
+                            <div class="valid-feedback" id="isnamevalid2">
+                              Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="isnameinvalid2">
+                              Please Enter a valid Name.
+                            </div>
+                          </div>
 
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                  <div class="form-group">
-                                    <input type="email" id="useremail2" name="email" class="form-control"
-                                      value="@gmail.com" placeholder="Your E-mail" required>
-                                  </div>
+                          <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                              <input type="email" id="useremail2" name="email" class="form-control" value="@gmail.com"
+                                placeholder="Your E-mail" required>
+                            </div>
 
-                                  <!-- Email validation alert boxes. -->
-                                  <div class="valid-feedback" id="isemailvalid2">
-                                    Looks good!
-                                  </div>
-                                  <div class="invalid-feedback" id="isemailinvalid2">
-                                    Please Enter a valid Email-Address.
-                                  </div>
-                                </div>
+                            <!-- Email validation alert boxes. -->
+                            <div class="valid-feedback" id="isemailvalid2">
+                              Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="isemailinvalid2">
+                              Please Enter a valid Email-Address.
+                            </div>
+                          </div>
 
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                  <div class="form-group">
-                                    <input type="tel" id="userphone2" name="Number" class="form-control"
-                                      placeholder="Your Phone Number" maxlength="10"
-                                      onkeypress="return /[0-9]/i.test(event.key)" required>
-                                  </div>
-                                  <!-- Contact valid or invalid checker div's -->
-                                  <div class="valid-feedback" id="isphonevalid2">
-                                    Looks good!
-                                  </div>
-                                  <div class="invalid-feedback" id="isphoneinvalid2">
-                                    Please Enter a valid Contact Number.
-                                  </div>
-                                </div>
+                          <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                              <input type="tel" id="userphone2" name="Number" class="form-control"
+                                placeholder="Your Phone Number" maxlength="10"
+                                onkeypress="return /[0-9]/i.test(event.key)" required>
+                            </div>
+                            <!-- Contact valid or invalid checker div's -->
+                            <div class="valid-feedback" id="isphonevalid2">
+                              Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="isphoneinvalid2">
+                              Please Enter a valid Contact Number.
+                            </div>
+                          </div>
 
-                              </div>
+                        </div>
 
-                              <div class="row" style="margin-right: 0;
+                        <div class="row" style="margin-right: 0;
                               margin-left: 0;">
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <textarea style="resize: none;" cols="10" rows="5" class="form-control"
-                                      name="message" placeholder="Message" id="usermessage2" required>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea style="resize: none;" cols="10" rows="5" class="form-control" name="message"
+                                placeholder="Message" id="usermessage2" required>
                                   </textarea>
-                                  </div>
-                                </div>
-                                <!-- Message valid or invalid checker div's -->
-                                <div class="valid-feedback" id="ismessagevalid2">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback" id="ismessageinvalid2">
-                                  Please Enter a valid Message.
-                                </div>
-                              </div>
+                            </div>
+                          </div>
+                          <!-- Message valid or invalid checker div's -->
+                          <div class="valid-feedback" id="ismessagevalid2">
+                            Looks good!
+                          </div>
+                          <div class="invalid-feedback" id="ismessageinvalid2">
+                            Please Enter a valid Message.
+                          </div>
+                        </div>
 
-                              <div class="row" style="margin-right: 0;
+                        <div class="row" style="margin-right: 0;
                               margin-left: 0;">
-                                <!-- Alert blocks to show the alerts regarding the submission of the form -->
-                                <!-- success alert block -->
-                                <div class="alert alert-success alert-dismissible" role="alert" id="issuccess2">
-                                  <strong>ThankYou for your response!</strong> Our team will get back to you soon.
-                                  <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                                </div>
-                                <!-- failure alert block -->
-                                <div class="alert alert-danger alert-dismissible" role="alert" id="isfailure2">
-                                  <strong>Something went wrong!</strong> Please fill the details properly.
-                                  <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                                </div>
-                                <!-- <div class="col-md-12">
+                          <!-- Alert blocks to show the alerts regarding the submission of the form -->
+                          <!-- success alert block -->
+                          <div class="alert alert-success alert-dismissible" role="alert" id="issuccess2">
+                            <strong>ThankYou for your response!</strong> Our team will get back to you soon.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                          <!-- failure alert block -->
+                          <div class="alert alert-danger alert-dismissible" role="alert" id="isfailure2">
+                            <strong>Something went wrong!</strong> Please fill the details properly.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                          <!-- <div class="col-md-12">
                                 <div class="form-group single-query">
                                   <img src=" {% static 'images/contact.jpg' %}" class="img-responsive" alt="image">
                                 </div>
                               </div> -->
-                                <div class="col-md-12 top20">
-                                  <div class="form-group single-query">
-                                    <button type="submit" class="btn_fill" id="contactsubmit2" name="btn_submit">
-                                      Submit</button>
-                                  </div>
-                                </div>
-
-                              </div>
-                            </form>
-
-
+                          <div class="col-md-12 top20">
+                            <div class="form-group single-query">
+                              <button type="submit" class="btn_fill" id="contactsubmit2" name="btn_submit">
+                                Submit</button>
+                            </div>
                           </div>
+
                         </div>
-                      </div>
+                      </form>
+
 
                     </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="social-networks top40">
-                          <div class="social-icons-2">
-                            <span class="share-it" style="background-color: white;font-size: 12px;">Social Media</span>
-                            <span><a href="https://www.facebook.com/searchhomesindia" target="_blank"><i
-                                  class="fa fa-facebook" aria-hidden="true"></i></a></span>
-                            <span><a href="https://twitter.com/SearchhomesIndi" target="_blank"><i class="fa fa-twitter"
-                                  aria-hidden="true"></i></a></span>
-                            <span><a href="https://www.youtube.com/channel/UCL-jPeknKXvpJG10vDw6cCg" target="_blank"><i
-                                  class="fa fa-youtube" aria-hidden="true"></i></a></span>
-                            <span><a href="https://www.instagram.com/searchhomesindia_/?igshid=7ipgwp7nfpjf"
-                                target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
-                            <span><a href="https://in.linkedin.com/company/search-homes-india" target="_blank"><i
-                                  class="fa fa-linkedin" aria-hidden="true"></i></a></span>
-                          </div>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="social-networks top40">
+                    <div class="social-icons-2">
+                      <span class="share-it" style="background-color: white;font-size: 12px;">Social Media</span>
+                      <span><a href="https://www.facebook.com/searchhomesindia" target="_blank"><i
+                            class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                      <span><a href="https://twitter.com/SearchhomesIndi" target="_blank"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a></span>
+                      <span><a href="https://www.youtube.com/channel/UCL-jPeknKXvpJG10vDw6cCg" target="_blank"><i
+                            class="fa fa-youtube" aria-hidden="true"></i></a></span>
+                      <span><a href="https://www.instagram.com/searchhomesindia_/?igshid=7ipgwp7nfpjf"
+                          target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+                      <span><a href="https://in.linkedin.com/company/search-homes-india" target="_blank"><i
+                            class="fa fa-linkedin" aria-hidden="true"></i></a></span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 bottom40 top40">
-              <h2 class="text-uppercase">Video <span style="color: gray;">Presentation</span></h2>
-              <p class="heading_space">We have Properties in these Areas View a list of Featured Properties.</p>
-              <div class="line_1"></div>
-              <div class="line_2"></div>
-              <div class="line_3"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="pro-video">
-                {% if Prop_Data.Video %}
-                <video width="600" height="400" style="margin-top:-71px;" controls autoplay>
-                  <source src="{{ Prop_Data.Video.url }}">
-                </video>
-                {% else %}
-                <video width="600" height="400" style="margin-top:-71px;" controls autoplay>
-                  <source src={% static "video/HOME.mp4" %}>
-                </video>
-                {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 bottom40 top40">
+        <h2 class="text-uppercase">Video <span style="color: gray;">Presentation</span></h2>
+        <p class="heading_space">We have Properties in these Areas View a list of Featured Properties.</p>
+        <div class="line_1"></div>
+        <div class="line_2"></div>
+        <div class="line_3"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="pro-video">
+          {% if Prop_Data.Video %}
+          <video width="600" height="400" style="margin-top:-71px;" controls autoplay>
+            <source src="{{ Prop_Data.Video.url }}">
+          </video>
+          {% else %}
+          <video width="600" height="400" style="margin-top:-71px;" controls autoplay>
+            <source src={% static "video/HOME.mp4" %}>
+          </video>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!--===== Loan Calculator =====-->
+    <section id="loan-calculator" style="padding: 10px 0px;margin-left: -264px;">
+      <div class="container">
+        <div class="row text-center">
+
+          <div class="col-md-3 col-sm-2 col-xs-12"></div>
+
+          <div class="col-md-6 col-sm-8 col-xs-12">
+
+            <div class="calc">
+
+              <div class="row">
+                <div class="col-md-12 text-center bottom40">
+                  <h2 class="text-uppercase bottom10">Loan <span class="color_red"
+                      style="color: gray;">Calculator</span></h2>
+                  <div class="text-center seprator">
+                    <div class="line_4"></div>
+                    <div class="line_5"></div>
+                    <div class="line_6"></div>
+                  </div>
+                  <p>We have Properties in these Areas View a list of Featured Properties.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          
-          <!--===== Loan Calculator =====-->
-  <section id="loan-calculator" style="padding: 10px 0px;margin-left: -264px;">
-    <div class="container">
-      <div class="row text-center">
-      
-        <div class="col-md-3 col-sm-2 col-xs-12"></div>
-          
-        <div class="col-md-6 col-sm-8 col-xs-12">
-  
-          <div class="calc">
-          
-          <div class="row">
-            <div class="col-md-12 text-center bottom40">
-              <h2 class="text-uppercase bottom10">Loan <span class="color_red" style="color: gray;">Calculator</span></h2>
-              <div class="text-center seprator">
-              <div class="line_4"></div>
-              <div class="line_5"></div>
-              <div class="line_6"></div>
+
+              <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <label for="amount" class="fa fa-usd"></label>
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                  <input type="text" id="amount" name="amount" placeholder="Loan Amount">
+                </div>
+
               </div>
-              <p>We have Properties in these Areas View a list of Featured Properties.</p>
-            </div>
-          </div>
-        
-          <div class="row">
-            <div class="col-md-2 col-sm-2 col-xs-2">
-                <label for="amount" class="fa fa-usd"></label>
-            </div>
-            <div class="col-md-10 col-sm-10 col-xs-10">
-              <input type="text" id="amount" name="amount" placeholder="Loan Amount">
-            </div>
-           
-           </div>
-          
-          <div class="row  p-b-30  p-t-30">  
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              <label for="amount" class="fa fa-calendar"></label>
-            </div>
-            
-            <div class="col-md-10 col-sm-10 col-xs-10">
-              <input type="text" id="months" placeholder="Months">
-            </div>
-          </div>
-          
-          <div class="row">  
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              <label for="amount" class="fa fa-calendar"></label>
-            </div>
-              
-            <div class="col-md-10 col-sm-10 col-xs-10">
-                <input type="text" id="years" placeholder="Years">
-            </div>
-          </div>
-          
-          <div class="row  p-b-30  p-t-30">
-            <div class="col-md-2 col-sm-2 col-xs-2">
-              <label for="amount" class="fa interest"></label>
-            </div>
-            
-            <div class="col-md-10 col-sm-10 col-xs-10">
-              <input type="text" id="interest" placeholder="Interest Rate">
-            </div>
-            
-            </div>
-            
-           <!-- <div class="row">
+
+              <div class="row  p-b-30  p-t-30">
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <label for="amount" class="fa fa-calendar"></label>
+                </div>
+
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                  <input type="text" id="months" placeholder="Months">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <label for="amount" class="fa fa-calendar"></label>
+                </div>
+
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                  <input type="text" id="years" placeholder="Years">
+                </div>
+              </div>
+
+              <div class="row  p-b-30  p-t-30">
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                  <label for="amount" class="fa interest"></label>
+                </div>
+
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                  <input type="text" id="interest" placeholder="Interest Rate">
+                </div>
+
+              </div>
+
+              <!-- <div class="row">
                <div class="col-md-2 col-sm-2 col-xs-2">
                   <label for="amount" class="fa fa-arrow-down"></label>
               </div>
@@ -677,305 +691,299 @@
               </div>
               
            </div> -->
-           
-           <div class="row  p-b-30  p-t-30">
-            <div class="col-md-12">
-              <button class="btn" onclick="myFunction()">Calculate</button>
+
+              <div class="row  p-b-30  p-t-30">
+                <div class="col-md-12">
+                  <button class="btn" onclick="myFunction()">Calculate</button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <p id="output">Monthly Payment</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <a href="." class="reset">Reset</a>
+                </div>
+              </div>
+
             </div>
-           </div>
-           
-           <div class="row">
-            <div class="col-md-12">
-              <p id="output">Monthly Payment</p>
-            </div>
-           </div>
-           
-           <div class="row">
-            <div class="col-md-12">
-              <a href="." class="reset">Reset</a>
-            </div>
-           </div>
-           
           </div>
+
+          <div class="col-md-3 col-sm-2 col-xs-12"></div>
+
         </div>
-        
-        <div class="col-md-3 col-sm-2 col-xs-12"></div>
-        
       </div>
+    </section>
+    <!--===== #/Loan Calculator =====-->
+
+  </div>
+  <!-- Enquiry now for -->
+  <!-- Enquiry modal form starts here -->
+  <div class="col-md-3 mc9">
+
+    <div class="slider-form col-md-4  col-sm-4 wow fadeIn text-center animated" data-wow-delay="0.5s"
+      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
+      <button class="button-normal yellow"
+        style="color:#FFF;background-color:#062d7b;width: 358px;margin-left: -5px;">Enquiry
+        Now</button>
     </div>
-  </section>
-  <!--===== #/Loan Calculator =====--> 
-
-        </div>
-        <!-- Enquiry now for -->
-        <!-- Enquiry modal form starts here -->
-        <div class="col-md-3 mc9">
-
-          <div class="slider-form col-md-4  col-sm-4 wow fadeIn text-center animated" data-wow-delay="0.5s"
-            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-            <button class="button-normal yellow"
-              style="color:#FFF;background-color:#062d7b;width: 358px;margin-left: -5px;">Enquiry
-              Now</button>
-          </div>
-          <div class="slider-form col-md-4  col-sm-4 wow fadeIn text-center animated" data-wow-delay="0.5s"
-            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-            <div class="form-wrap" style="width: 358px;margin-left: -93px;margin-top: 81px;background-color: #eff8ff;">
-              <div class="form-appointment">
-                <form class="contact-form" id="PropContactform3">
-                  {% csrf_token %}
-                  <div class="row" style="margin-right: 0;
+    <div class="slider-form col-md-4  col-sm-4 wow fadeIn text-center animated" data-wow-delay="0.5s"
+      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
+      <div class="form-wrap" style="width: 358px;margin-left: -93px;margin-top: 81px;background-color: #eff8ff;">
+        <div class="form-appointment">
+          <form class="contact-form" id="PropContactform3">
+            {% csrf_token %}
+            <div class="row" style="margin-right: 0;
                   margin-left: 0;padding-top: 10px;">
-                    <div class="col-md-12 col-sm-4 col-xs-12">
-                      <input type="hidden" name="Propdetail" id="Propdetail3" value="{{ Prop_Data.PropertyName }}">
-                      <div class="form-group">
-                        <input type="text" id="username3" name="name" class="keyword-input form-control"
-                          placeholder="Your Name" required>
-                      </div>
+              <div class="col-md-12 col-sm-4 col-xs-12">
+                <input type="hidden" name="Propdetail" id="Propdetail3" value="{{ Prop_Data.PropertyName }}">
+                <div class="form-group">
+                  <input type="text" id="username3" name="name" class="keyword-input form-control"
+                    placeholder="Your Name" required>
+                </div>
 
-                      <!-- Name valid or invalid checker div's -->
-                      <div class="valid-feedback" id="isnamevalid3">
-                        Looks good!
-                      </div>
-                      <div class="invalid-feedback" id="isnameinvalid3">
-                        Please Enter a valid Name.
-                      </div>
-                    </div>
+                <!-- Name valid or invalid checker div's -->
+                <div class="valid-feedback" id="isnamevalid3">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback" id="isnameinvalid3">
+                  Please Enter a valid Name.
+                </div>
+              </div>
 
-                    <div class="col-md-12 col-sm-4 col-xs-12">
-                      <div class="form-group">
-                        <input type="email" id="useremail3" name="email" class="keyword-input form-control"
-                          value="@gmail.com" placeholder="Your E-mail" required>
-                      </div>
+              <div class="col-md-12 col-sm-4 col-xs-12">
+                <div class="form-group">
+                  <input type="email" id="useremail3" name="email" class="keyword-input form-control" value="@gmail.com"
+                    placeholder="Your E-mail" required>
+                </div>
 
-                      <!-- Email validation alert boxes. -->
-                      <div class="valid-feedback" id="isemailvalid3">
-                        Looks good!
-                      </div>
-                      <div class="invalid-feedback" id="isemailinvalid3">
-                        Please Enter a valid Email-Address.
-                      </div>
-                    </div>
+                <!-- Email validation alert boxes. -->
+                <div class="valid-feedback" id="isemailvalid3">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback" id="isemailinvalid3">
+                  Please Enter a valid Email-Address.
+                </div>
+              </div>
 
-                    <div class="col-md-12 col-sm-4 col-xs-12">
-                      <div class="form-group">
-                        <input type="tel" id="userphone3" name="Number" class="keyword-input form-control"
-                          placeholder="Your Phone Number" maxlength="10" onkeypress="return /[0-9]/i.test(event.key)"
-                          required>
-                      </div>
-                      <!-- Contact valid or invalid checker div's -->
-                      <div class="valid-feedback" id="isphonevalid3">
-                        Looks good!
-                      </div>
-                      <div class="invalid-feedback" id="isphoneinvalid3">
-                        Please Enter a valid Contact Number.
-                      </div>
-                    </div>
+              <div class="col-md-12 col-sm-4 col-xs-12">
+                <div class="form-group">
+                  <input type="tel" id="userphone3" name="Number" class="keyword-input form-control"
+                    placeholder="Your Phone Number" maxlength="10" onkeypress="return /[0-9]/i.test(event.key)"
+                    required>
+                </div>
+                <!-- Contact valid or invalid checker div's -->
+                <div class="valid-feedback" id="isphonevalid3">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback" id="isphoneinvalid3">
+                  Please Enter a valid Contact Number.
+                </div>
+              </div>
 
-                  </div>
+            </div>
 
-                  <div class="row" style="margin-right: 0;
+            <div class="row" style="margin-right: 0;
                   margin-left: 0;">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <textarea class="form-control" style="resize: none; padding: 5px 10px;" name="message"
-                          placeholder="Message" id="usermessage3" required>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea class="form-control" style="resize: none; padding: 5px 10px;" name="message"
+                    placeholder="Message" id="usermessage3" required>
                         </textarea>
-                      </div>
-                    </div>
-                    <!-- Message valid or invalid checker div's -->
-                    <div class="valid-feedback" id="ismessagevalid3">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback" id="ismessageinvalid3">
-                      Please Enter a valid Message.
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <!-- Message valid or invalid checker div's -->
+              <div class="valid-feedback" id="ismessagevalid3">
+                Looks good!
+              </div>
+              <div class="invalid-feedback" id="ismessageinvalid3">
+                Please Enter a valid Message.
+              </div>
+            </div>
 
-                  <div class="row" style="margin-right: 0;
+            <div class="row" style="margin-right: 0;
                   margin-left: 0;">
-                    <!-- Alert blocks to show the alerts regarding the submission of the form -->
-                    <!-- success alert block -->
-                    <div class="alert alert-success alert-dismissible" style="font-size: 12px;" role="alert"
-                      id="issuccess3">
-                      <strong>ThankYou for your response!</strong> Our team will get back to you soon.
-                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    <!-- failure alert block -->
-                    <div class="alert alert-danger alert-dismissible" style="font-size: 12px;" role="alert"
-                      id="isfailure3">
-                      <strong>Something went wrong!</strong> Please fill the details properly.
-                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    <!-- <div class="col-md-12">
+              <!-- Alert blocks to show the alerts regarding the submission of the form -->
+              <!-- success alert block -->
+              <div class="alert alert-success alert-dismissible" style="font-size: 12px;" role="alert" id="issuccess3">
+                <strong>ThankYou for your response!</strong> Our team will get back to you soon.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <!-- failure alert block -->
+              <div class="alert alert-danger alert-dismissible" style="font-size: 12px;" role="alert" id="isfailure3">
+                <strong>Something went wrong!</strong> Please fill the details properly.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <!-- <div class="col-md-12">
                       <div class="form-group single-query"">
                                 <img src=" {% static 'images/contact.jpg' %}" class="img-responsive"
                         alt="image">
                       </div>
                     </div> -->
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <button type="submit" style="font-size: 11px;" class="btn_fill" id="contactsubmit3"
-                          name="btn_submit">
-                          Submit</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-        <!-- End of Enquiry now form  -->
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="property-query-area">
-            <div class="row">
               <div class="col-md-12">
-                <h3 class="text-uppercase  bottom40">Advance <span class="color_red" style="color: gray;">Search</span>
-                </h3>
+                <div class="form-group">
+                  <button type="submit" style="font-size: 11px;" class="btn_fill" id="contactsubmit3" name="btn_submit">
+                    Submit</button>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <form class="findus clearfix" id="SearchForm" action="/propertylist/" method="get">
 
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <select class="selectpicker" id="BuilderQuery" name="BuilderQuery" data-live-search="true">
-                      <option class="active">Select Builder</option>
-                      <option>Prestige Group</option>
-                      <option>Brigade Group</option>
-                      <option>Sobha Limited</option>
-                      <option>Cornerstone Properties</option>
-                      <option>Ozone Group</option>
-                      <option>Vaswani Group</option>
-                      <option>Advaitha Ventures</option>
-                      <option>GK Shelters</option>
-                      <option>Ozone Group</option>
-                      <option>MJR Builders</option>
-                      <option>MSR Developers</option>
-                      <option>Godrej Properties</option>
-                      <option>SR Builders</option>
-                      <option>Provident Group</option>
-                      <option>Ecolife Developers</option>
-                      <option>Arvind Smartspace</option>
-                      <option>Assetz Property Group</option>
-                      <option>Goyal co.</option>
-                      <option>Birla Estate</option>
-                      <option>Candeur Constructions</option>
-                      <option>Concorde Group</option>
-                      <option>Embassy Group</option>
-                      <option>Kolte Patil</option>
-                      <option>Rohan Builders</option>
-                      <option>Incor Group</option>
-                      <option>Habitat Ventures</option>
-                      <option>Sai Purvi Developers</option>
-                      <option>TATA Reality And Infrastructure Ltd</option>
-                      <option>UNICCA Builders And Developers</option>
-                      <option>Subha Builders & Developers</option>
-                      <option>Shriram Properties</option>
-                      <option>Total Environment</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <!-- In this input tag the user will type the query (only property name) -->
-                    <input type="text" class="keyword-input" id="query" name="query"
-                      placeholder="Please Enter Name Of  Apartment, Villa, plot, Row-houses"
-                      onkeypress="return /[a-z A-Z]/i.test(event.key)">
-                    <!-- used this code to prevent the number's and symbols to get inputed by the user by using onkeypress and regex expression onkeypress="return /[a-z A-Z]/i.test(event.key)" -->
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <select class="selectpicker" id="LocationQuery" name="LocationQuery" data-live-search="true">
-                      <option class="active">Select Location</option>
-                      <option>Bangalore</option>
-                      <option>Mumbai </option>
-                      <option>Delhi</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <select class="selectpicker" id="PropertyTypeQuery" name="PropertyTypeQuery"
-                      data-live-search="true">
-                      <option class="active">Select Property Type</option>
-                      <option>Residential</option>
-                      <option>Commercial</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <select class="selectpicker" id="SubPropertyTypeQuery" name="SubPropertyTypeQuery"
-                      data-live-search="true">
-                      <option class="active">Select Sub Property Type</option>
-                      <option>Plot</option>
-                      <option>Villa</option>
-                      <option>Apartment</option>
-                      <option>Rowhouse</option>
-                      <option>Farmhouse</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <select class="selectpicker" id="PropertyStatusQuery" name="PropertyStatusQuery"
-                      data-live-search="true">
-                      <option class="active">Select Property Status</option>
-                      <option>Ongoing</option>
-                      <option>Completed</option>
-                      <option>Ready to Move</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <label class="form-label" for="range">Price Range:</label>
-                    <input type="hidden" name="PriceRange" id="PriceRange" value="">
-                    <span> 0 Lakh</span>
-                    <span id="op"> 0 </span>
-                    <span>Cr</span>
-                    <div class="range">
-                      <input type="range" class="form-range" id="Range" min="0" max="100" value="0">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="single-query">
-                    <div class="query-submit-button form-group">
-                      <button type="submit" class="btn_fill" style="color: gray;">Search</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- End of Enquiry now form  -->
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="property-query-area">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-uppercase  bottom40">Advance <span class="color_red" style="color: gray;">Search</span>
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <form class="findus clearfix" id="SearchForm" action="/propertylist/" method="get">
+
+          <div class="col-md-12">
+            <div class="single-query">
+              <select class="selectpicker" id="BuilderQuery" name="BuilderQuery" data-live-search="true">
+                <option class="active">Select Builder</option>
+                <option>Prestige Group</option>
+                <option>Brigade Group</option>
+                <option>Sobha Limited</option>
+                <option>Cornerstone Properties</option>
+                <option>Ozone Group</option>
+                <option>Vaswani Group</option>
+                <option>Advaitha Ventures</option>
+                <option>GK Shelters</option>
+                <option>Ozone Group</option>
+                <option>MJR Builders</option>
+                <option>MSR Developers</option>
+                <option>Godrej Properties</option>
+                <option>SR Builders</option>
+                <option>Provident Group</option>
+                <option>Ecolife Developers</option>
+                <option>Arvind Smartspace</option>
+                <option>Assetz Property Group</option>
+                <option>Goyal co.</option>
+                <option>Birla Estate</option>
+                <option>Candeur Constructions</option>
+                <option>Concorde Group</option>
+                <option>Embassy Group</option>
+                <option>Kolte Patil</option>
+                <option>Rohan Builders</option>
+                <option>Incor Group</option>
+                <option>Habitat Ventures</option>
+                <option>Sai Purvi Developers</option>
+                <option>TATA Reality And Infrastructure Ltd</option>
+                <option>UNICCA Builders And Developers</option>
+                <option>Subha Builders & Developers</option>
+                <option>Shriram Properties</option>
+                <option>Total Environment</option>
+              </select>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="text-uppercase  bottom40 top40">Recent <span style="color: gray;">Properties</span></h3>
-              {% for recent in recent_properties %}
-              {% if recent.PropertyName != Prop_Data.PropertyName %}
-              <div class="media">
-                <div class="media-left media-middle">
-                  <a href="/{{recent.slug}}/{{recent.Location}}">
-                    <img class="media-object" src="{{ recent.Property_Image.url }}" height="100" width="100"
-                      alt="image">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="/{{recent.slug}}/{{recent.Location}}">{{ recent.PropertyName }}</a>
-                  </h4>
-                  <p>{{ recent.Location }}</p>
-                  <a href="#.">{{ recent.Property_Price }}</a>
-                </div>
+          <div class="col-md-12">
+            <div class="single-query">
+              <!-- In this input tag the user will type the query (only property name) -->
+              <input type="text" class="keyword-input" id="query" name="query"
+                placeholder="Please Enter Name Of  Apartment, Villa, plot, Row-houses"
+                onkeypress="return /[a-z A-Z]/i.test(event.key)">
+              <!-- used this code to prevent the number's and symbols to get inputed by the user by using onkeypress and regex expression onkeypress="return /[a-z A-Z]/i.test(event.key)" -->
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="single-query">
+              <select class="selectpicker" id="LocationQuery" name="LocationQuery" data-live-search="true">
+                <option class="active">Select Location</option>
+                <option>Bangalore</option>
+                <option>Mumbai </option>
+                <option>Delhi</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="single-query">
+              <select class="selectpicker" id="PropertyTypeQuery" name="PropertyTypeQuery" data-live-search="true">
+                <option class="active">Select Property Type</option>
+                <option>Residential</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="single-query">
+              <select class="selectpicker" id="SubPropertyTypeQuery" name="SubPropertyTypeQuery"
+                data-live-search="true">
+                <option class="active">Select Sub Property Type</option>
+                <option>Plot</option>
+                <option>Villa</option>
+                <option>Apartment</option>
+                <option>Rowhouse</option>
+                <option>Farmhouse</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="single-query">
+              <select class="selectpicker" id="PropertyStatusQuery" name="PropertyStatusQuery" data-live-search="true">
+                <option class="active">Select Property Status</option>
+                <option>Ongoing</option>
+                <option>Completed</option>
+                <option>Ready to Move</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="single-query">
+              <label class="form-label" for="range">Price Range:</label>
+              <input type="hidden" name="PriceRange" id="PriceRange" value="">
+              <span> 0 Lakh</span>
+              <span id="op"> 0 </span>
+              <span>Cr</span>
+              <div class="range">
+                <input type="range" class="form-range" id="Range" min="0" max="100" value="0">
               </div>
-              {% endif %}
-              {% endfor %}
-              <!-- <div class="media">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="single-query">
+              <div class="query-submit-button form-group">
+                <button type="submit" class="btn_fill" style="color: gray;">Search</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-uppercase  bottom40 top40">Recent <span style="color: gray;">Properties</span></h3>
+        {% for recent in recent_properties %}
+        {% if recent.PropertyName != Prop_Data.PropertyName %}
+        <div class="media">
+          <div class="media-left media-middle">
+            <a href="/{{recent.slug}}/{{recent.Location}}">
+              <img class="media-object" src="{{ recent.Property_Image.url }}" height="100" width="100" alt="image">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><a href="/{{recent.slug}}/{{recent.Location}}">{{ recent.PropertyName }}</a>
+            </h4>
+            <p>{{ recent.Location }}</p>
+            <a href="#.">{{ recent.Property_Price }}</a>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <!-- <div class="media">
               <div class="media-left media-middle">
                 <a href="#.">
                 <img class="media-object" src={% static "images/f-p-2.png" %} alt="image">
@@ -987,7 +995,7 @@
                 <a href="#.">$178,600</a>
               </div>
             </div> -->
-              <!-- <div class="media">
+        <!-- <div class="media">
               <div class="media-left media-middle">
                 <a href="#.">
                 <img class="media-object" src={% static "images/f-p-3.png" %} alt="image">
@@ -999,7 +1007,7 @@
                 <a href="#.">$178,600</a>
               </div>
             </div> -->
-              <!-- <div class="media">
+        <!-- <div class="media">
               <div class="media-left media-middle">
                 <a href="#.">
                 <img class="media-object" src={% static "images/f-p-1.png" %} alt="image">
@@ -1011,51 +1019,51 @@
                 <a href="#.">$178,600</a>
               </div>
             </div> -->
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="text-uppercase bottom40 top40">Featured <span style="color: gray;">Properties</span></h3>
-            </div>
-            <div class="col-md-12">
-              <div id="agent-2-slider" class="owl-carousel">
-                {% for image in featured_images %}
-                <div class="item">
-                  <div class="property_item heading_space">
-                    <div class="image">
-                      <center>
-                        <h5 class="text-uppercase">{{ image.PropertyName }}</h5>
-                      </center>
-                      <a href="/{{image.slug}}/{{image.Location}}"><img src="{{ image.Property_Image.url }}"
-                          alt="listin" class="img-responsive" style="width:364px; height:254px;"></a>
-                      <div class="price clearfix"><span class="tag pull-right"> <small></small></span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-uppercase bottom40 top40">Featured <span style="color: gray;">Properties</span></h3>
+      </div>
+      <div class="col-md-12">
+        <div id="agent-2-slider" class="owl-carousel">
+          {% for image in featured_images %}
+          <div class="item">
+            <div class="property_item heading_space">
+              <div class="image">
+                <center>
+                  <h5 class="text-uppercase">{{ image.PropertyName }}</h5>
+                </center>
+                <a href="/{{image.slug}}/{{image.Location}}"><img src="{{ image.Property_Image.url }}" alt="listin"
+                    class="img-responsive" style="width:364px; height:254px;"></a>
+                <div class="price clearfix"><span class="tag pull-right"> <small></small></span></div>
 
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-                <!-- <div class="item">
-                <div class="property_item heading_space">
-                  <div class="image">
-                    <a href="#."><img src={% static "images/property-listing-6.jpg" %} alt="listin" class="img-responsive"></a>
-                    <div class="price clearfix"><span class="tag pull-right">$8,600 Per Month - <small>Family Home</small></span></div>
-                  </div>
-                </div>
-              </div> -->
-                <!-- <div class="item">
-                <div class="property_item heading_space">
-                  <div class="image">
-                    <a href="#."><img src={% static "images/property-listing-6.jpg" %} alt="listin" class="img-responsive"></a>
-                    <div class="price clearfix"><span class="tag pull-right">$8,600 Per Month - <small>Family Home</small></span></div>
-                  </div>
-                </div>
-              </div> -->
               </div>
             </div>
           </div>
+          {% endfor %}
+          <!-- <div class="item">
+                <div class="property_item heading_space">
+                  <div class="image">
+                    <a href="#."><img src={% static "images/property-listing-6.jpg" %} alt="listin" class="img-responsive"></a>
+                    <div class="price clearfix"><span class="tag pull-right">$8,600 Per Month - <small>Family Home</small></span></div>
+                  </div>
+                </div>
+              </div> -->
+          <!-- <div class="item">
+                <div class="property_item heading_space">
+                  <div class="image">
+                    <a href="#."><img src={% static "images/property-listing-6.jpg" %} alt="listin" class="img-responsive"></a>
+                    <div class="price clearfix"><span class="tag pull-right">$8,600 Per Month - <small>Family Home</small></span></div>
+                  </div>
+                </div>
+              </div> -->
         </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
 </section>
 <section id="agent-p-2" class="bg_light property-details padding">
   <div class="container">
@@ -1092,7 +1100,7 @@
               </div>
               <div class="proerty_content">
                 <div class="property_meta"> <span><i class="icon-select-an-objecto-tool"></i>
-                  {{ image.Project_Area }}</span> <span><i class=" icon-bed"></i>{{ image.BHK }}</span> <span><i
+                    {{ image.Project_Area }}</span> <span><i class=" icon-bed"></i>{{ image.BHK }}</span> <span><i
                       class="icon-safety-shower"></i>1 Bathroom</span> </div>
                 <div class="property_meta padding-b-30"> <span><i class="icon-old-television"></i>TV Lounge</span>
                   <span><i class="icon-garage"></i>1 Garage</span> <span></span>
