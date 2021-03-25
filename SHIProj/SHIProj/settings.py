@@ -33,7 +33,7 @@ SECRET_KEY = '*svhxkru#4ck*jn$1*3rkxlm@f0b3qn!t)+^4epx+$oz#=%pad'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.searchhomesindia.com', '184.168.127.141'] #url of godaddy
-ALLOWED_HOSTS = ['www.searchhomesindia.com', '143.110.250.221'] #url of digitalocean
+ALLOWED_HOSTS = ['.searchhomesindia.com', '143.110.250.221'] #url of digitalocean
 # ALLOWED_HOSTS = []
 
 # Application definition
