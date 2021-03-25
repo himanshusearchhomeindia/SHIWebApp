@@ -1073,6 +1073,33 @@
     </div>
   </div>
 </section>
+<div class="container margin_top">
+  <div class="row">
+    <div class="col-xs-12 bottom40">
+      <h2 class="text-uppercase">Property <span style="color: gray;">Map</span></h2>
+      <p class="heading_space">We have Properties in these Areas View a list of Featured Properties.</p>
+      <div class="line_1"></div>
+      <div class="line_2"></div>
+      <div class="line_3"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <div id="map_canvas"> -->
+      {% if Prop_Data.Google_Map %}
+      <div class="panel-body">
+        <iframe src="{{ Prop_Data.Google_Map }}" width="100%" height="450" frameborder="0" style="border:0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- <iframe src="{{ Prop_Data.Google_Map }}" width="1100" height="500" frameborder="0" style="border:0"
+        allowfullscreen></iframe> -->
+  {% else %}
+  <h1> No Google Map Available</h1>
+  {% endif %}
+  <!-- </div> -->
+</div>
 <section id="agent-p-2" class="bg_light property-details padding">
   <div class="container">
     <div class="row">
@@ -1131,33 +1158,7 @@
   </div>
 </section>
 
-<div class="container margin_top">
-  <div class="row">
-    <div class="col-xs-12 bottom40">
-      <h2 class="text-uppercase">Property <span style="color: gray;">Map</span></h2>
-      <p class="heading_space">We have Properties in these Areas View a list of Featured Properties.</p>
-      <div class="line_1"></div>
-      <div class="line_2"></div>
-      <div class="line_3"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <!-- <div id="map_canvas"> -->
-      {% if Prop_Data.Google_Map %}
-      <div class="panel-body">
-        <iframe src="{{ Prop_Data.Google_Map }}" width="100%" height="450" frameborder="0" style="border:0"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-  <!-- <iframe src="{{ Prop_Data.Google_Map }}" width="1100" height="500" frameborder="0" style="border:0"
-        allowfullscreen></iframe> -->
-  {% else %}
-  <h1> No Google Map Available</h1>
-  {% endif %}
-  <!-- </div> -->
-</div>
+<!-- map was here -->
 </div>
 </div>
 
