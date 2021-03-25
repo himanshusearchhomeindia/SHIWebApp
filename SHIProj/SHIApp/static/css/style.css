@@ -8449,11 +8449,12 @@ a.close-overlay.hidden {
 /* This is for changing the font size of tabs in property details page. */
 @media (max-width: 992px){
     .property-tab>.nav-tabs>li>a {
-        font-size: 8px;
+        font-size: 9.5px;
     }
     /*This will make the loan calculator responsive*/
     #loan-calculator{
         padding: 0px;
         margin-left: 0px;
+        margin-bottom: 5px;
     }
 }
