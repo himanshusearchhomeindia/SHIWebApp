@@ -176,14 +176,18 @@
                             <td><b>Project Area</b></td>
                             <td class="text-right">{{ Prop_Data.Project_Area }}</td>
                           </tr>
-                          <tr>
-                            <td><b>No of Units</b></td>
-                            <td class="text-right">{{ Prop_Data.NoOfUnits }}</td>
-                          </tr>
+                          {% if Prop_Data.NoOfUnits %}
+                            <tr>
+                              <td><b>No of Units</b></td>
+                              <td class="text-right">{{ Prop_Data.NoOfUnits }}</td>
+                            </tr>
+                          {% endif %}
+                          {% if Prop_Data.PossessionDate %}
                           <tr>
                             <td><b>Possession Date</b></td>
                             <td class="text-right">{{ Prop_Data.PossessionDate }}</td>
                           </tr>
+                          {% endif %}
                           <tr>
                             <td><b>Status</b></td>
                             <td class="text-right">{{ Prop_Data.PropertyStatus }}</td>
@@ -195,6 +199,10 @@
                           <tr>
                             <td><b>Base Price</b></td>
                             <td class="text-right">{{ Prop_Data.Property_Price }}</td>
+                          </tr>
+                          <tr>
+                            <td><b>Per sq ft</b></td>
+                            <td class="text-right">{{ Prop_Data.PerSqftPrice }}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -239,10 +247,6 @@
                             <td class="text-right">{{ Prop_Data.ExFourBHK }}</td>
                           </tr>
                           {% endif %}
-                          <tr>
-                            <td><b>Per sq ft</b></td>
-                            <td class="text-right">{{ Prop_Data.PerSqftPrice }}</td>
-                          </tr>
                           <!-- <tr>
                             <td><b>possession_date</b></td>
                             <td class="text-right">{{ prop.possession_date }}</td>
