@@ -157,13 +157,13 @@ SubmitButton2.addEventListener('click', (event) => {
             then(res => res.json()). //converting the the response into json format.
             then((res) => {
                 if (res.success == true) {
-                    Form.reset();  //this is used to reset the form.
+                    Form2.reset();  //this is used to reset the form.
                     SuccessAlert2.style.display = 'block';  //this is used to show the success alert.
                     FailureAlert2.style.display = 'none';    //this is used to hide the failure alert.
                     Refresh(); //it will refresh the page.
                 }
                 else if (res.success == false) {
-                    Form.reset();  //this is used to reset the form.
+                    Form2.reset();  //this is used to reset the form.
                     FailureAlert2.style.display = 'block'; //this is used to show the failure alert.
                     SuccessAlert2.style.display = 'none';    //this is used to hide the success alert.
                     Refresh(); //it will refresh the page.
@@ -171,7 +171,7 @@ SubmitButton2.addEventListener('click', (event) => {
             }).
             //if any error occured it will show in message.
             catch(() => {
-                Form.reset();  //this is used to reset the form.
+                Form2.reset();  //this is used to reset the form.
                 FailureAlert2.style.display = 'block'; //this is used to show the failure alert.
                 SuccessAlert2.style.display = 'none'; //this is used to hide the success alert.
                 Refresh(); //it will refresh the page.
@@ -180,7 +180,7 @@ SubmitButton2.addEventListener('click', (event) => {
 
     } else {
         //if any of the data values will left empty it will not submit the form and show the error alert to the user.
-        Form.reset();  //this is used to reset the form.
+        Form2.reset();  //this is used to reset the form.
         FailureAlert2.style.display = 'block'; //this is used to show the failure alert.
         SuccessAlert2.style.display = 'none'; //this is used to hide the success alert.
         Refresh(); //it will refresh the page.
