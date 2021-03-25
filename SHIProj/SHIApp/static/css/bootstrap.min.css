@@ -7,8 +7,8 @@
 /*this will change the video layout in mobile view*/
 @media (max-width: 992px){
     video{
-        height: 360px;
-        width: 640px;
+        height: 40vh;
+        width: 93vw;
         margin-bottom: 10px;
     }
 }
