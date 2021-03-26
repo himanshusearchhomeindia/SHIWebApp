@@ -8457,4 +8457,12 @@ a.close-overlay.hidden {
         margin-left: 0px;
         margin-bottom: 5px;
     }
+    .gn-btn{
+        margin-right: 95px;
+    }
+}
+/*This is for general search button*/
+.gn-btn{
+    color: gray;
+    margin-right: -473px;
 }
