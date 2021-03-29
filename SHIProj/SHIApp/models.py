@@ -119,6 +119,7 @@ class PropertyList(models.Model):
         ('Apartment', 'Apartment'),
         ('Rowhouse', 'Rowhouse'),
         ('Farmhouse', 'Farmhouse'),
+        ('Building', 'Building'),
         #this is used to add the sub property dropdown menu in the general search(this will help the user to get the correct result).
     ]
     #subproptype details will get stored here.
