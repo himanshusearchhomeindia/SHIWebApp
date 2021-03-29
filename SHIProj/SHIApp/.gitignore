@@ -1,4 +1,3 @@
-migrations/*.py
-migrations/__pycache__
+SHIApp/__pycache__
 __pycache__
 
