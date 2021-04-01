@@ -104,6 +104,13 @@ class PropertyList(models.Model):
     ]  # choices for property status.
     # property status will be stored here.
     PropertyStatus = models.CharField(max_length=50, choices=PropertyStat)
+    
+    UpcomingProp = [
+        ('Yes', 'Yes'),
+        ('No', 'No'),
+    ]  # choices for property status.
+    # property status will be stored here.
+    UpcomingProperty = models.CharField(max_length=50, choices=UpcomingProp)
 
     PropertyType = [
         ('Residential', 'Residential'),
